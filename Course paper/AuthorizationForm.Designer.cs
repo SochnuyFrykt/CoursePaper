@@ -1,6 +1,6 @@
 ﻿namespace Course_paper
 {
-	partial class Form1
+	partial class AuthorizationForm
 	{
 		/// <summary>
 		/// Обязательная переменная конструктора.
