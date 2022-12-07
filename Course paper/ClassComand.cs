@@ -26,7 +26,7 @@ namespace Course_paper
 
 		public static void Collaps(FormWindowState WindowState)
 		{
-			 WindowState = FormWindowState.Minimized;
+			WindowState = FormWindowState.Minimized;
 		}
 	}
 }

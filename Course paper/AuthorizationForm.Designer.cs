@@ -30,6 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
 			this.TopPanel = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
 			this.CollapsButton = new System.Windows.Forms.Label();
 			this.CloseButton = new System.Windows.Forms.Label();
 			this.BottomPanel = new System.Windows.Forms.Panel();
@@ -37,7 +38,6 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label3 = new System.Windows.Forms.Label();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -55,6 +55,19 @@
 			this.TopPanel.TabIndex = 0;
 			this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
 			this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label3.Location = new System.Drawing.Point(3, 5);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(122, 20);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "FortuneBuilding";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label3.UseMnemonic = false;
 			// 
 			// CollapsButton
 			// 
@@ -137,17 +150,6 @@
 			this.panel1.Size = new System.Drawing.Size(130, 130);
 			this.panel1.TabIndex = 4;
 			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label3.Location = new System.Drawing.Point(3, 5);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(122, 20);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "FortuneBuilding";
-			// 
 			// AuthorizationForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +164,8 @@
 			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "AuthorizationForm";
-			this.Text = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "FortuneBuilding";
 			this.TopPanel.ResumeLayout(false);
 			this.TopPanel.PerformLayout();
 			this.BottomPanel.ResumeLayout(false);
