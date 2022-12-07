@@ -46,14 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization.cs">
+    <Compile Include="AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authorization.Designer.cs">
-      <DependentUpon>Authorization.cs</DependentUpon>
+    <Compile Include="AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassComand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
