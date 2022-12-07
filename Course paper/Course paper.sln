@@ -5,6 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course paper", "Course paper.csproj", "{4E3F055B-9C5E-403E-AB84-522755F5E06F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Icon", "Icon", "{2FF82B75-BE47-48FB-A045-AB219680039C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Человек.png = ..\..\..\Человек.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
