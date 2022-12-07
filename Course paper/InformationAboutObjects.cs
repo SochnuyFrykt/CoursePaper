@@ -16,7 +16,7 @@ namespace Course_paper
         public InformationAboutObjects(MainMenu form)
         {
             InitializeComponent();
-            //formtoopen = form;
+            formtoopen = form;
         }
         public override void ButtonBack_Click(object sender, EventArgs e)
         {

@@ -16,7 +16,7 @@ namespace Course_paper
         public Orders(MainMenu form)
         {
             InitializeComponent();
-            //formtoopen = form;
+            formtoopen = form;
         }
         //public Orders(MainMenuWorker form)
         //{

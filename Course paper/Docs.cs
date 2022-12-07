@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
+<<<<<<< HEAD
     public partial class Docs : Form
     {
         public Docs()
         {
             InitializeComponent();
+=======
+    public partial class Docs : Template
+    {
+        Form formtoopen;
+        public Docs(MainMenu form)
+        {
+            InitializeComponent();
+            formtoopen = form;
+        }
+        public override void ButtonBack_Click(object sender, EventArgs e)
+        {
+            formtoopen.Show();
+            Hide();
+>>>>>>> Development
         }
     }
 }

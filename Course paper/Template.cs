@@ -63,8 +63,8 @@ namespace Course_paper
         }
         private void ButtonHelp_Click(object sender, EventArgs e)
         {
-            //Help help = new Help();
-            //help.Show();
+            Help help = new Help();
+            help.Show();
         }
 
         public virtual void ButtonBack_Click(object sender, EventArgs e)
