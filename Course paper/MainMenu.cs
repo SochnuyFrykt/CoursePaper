@@ -16,7 +16,7 @@ namespace Course_paper
         Monitoring monitoring;
         SalaryCalculation salary;
         Orders orders;
-        //Docs docs;
+        Docs docs;
         public MainMenu()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Course_paper
             monitoring = new Monitoring(this);
             salary = new SalaryCalculation(this);
             orders = new Orders(this);
-            //docs = new Docs(this);
+            docs = new Docs(this);
         }
 
         private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Course_paper
 
         private void DocumentGenerationButton_Click(object sender, EventArgs e)
         {
-            //docs.Show();
+            docs.Show();
             Hide();
 
         }

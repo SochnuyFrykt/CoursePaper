@@ -53,6 +53,12 @@
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassComand.cs" />
+    <Compile Include="Docs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docs.Designer.cs">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
