@@ -12,16 +12,16 @@ namespace Course_paper
 {
     public partial class MainMenu : Template
     {
-        //InformationAboutObjects info;
-        //Monitoring monitoring;
+        InformationAboutObjects info;
+        Monitoring monitoring;
         SalaryCalculation salary;
         Orders orders;
         //Docs docs;
         public MainMenu()
         {
             InitializeComponent();
-            //info = new InformationAboutObjects(this);
-            //monitoring = new Monitoring(this);
+            info = new InformationAboutObjects(this);
+            monitoring = new Monitoring(this);
             salary = new SalaryCalculation(this);
             orders = new Orders(this);
             //docs = new Docs(this);
@@ -29,13 +29,13 @@ namespace Course_paper
 
         private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
         {
-            //info.Show();
+            info.Show();
             Hide();
         }
 
         private void ActivityTrackingButton_Click(object sender, EventArgs e)
         {
-            //monitoring.Show();
+            monitoring.Show();
             Hide();
         }
 
