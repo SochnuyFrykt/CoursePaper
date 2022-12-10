@@ -145,6 +145,7 @@
 			this.LoginButton.TabIndex = 3;
 			this.LoginButton.Text = "Войти";
 			this.LoginButton.UseVisualStyleBackColor = false;
+			this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
 			// 
 			// panel1
 			// 
@@ -176,6 +177,7 @@
 			this.Password.PasswordChar = '*';
 			this.Password.Size = new System.Drawing.Size(170, 20);
 			this.Password.TabIndex = 3;
+			this.Password.Text = "admin";
 			this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label1
@@ -197,6 +199,7 @@
 			this.Login.Name = "Login";
 			this.Login.Size = new System.Drawing.Size(170, 20);
 			this.Login.TabIndex = 1;
+			this.Login.Text = "admin";
 			this.Login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label5

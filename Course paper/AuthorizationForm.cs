@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Course_paper
 {
@@ -39,6 +40,29 @@ namespace Course_paper
 		private void CollapsButton_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Minimized;
+		}
+
+		private void LoginButton_Click(object sender, EventArgs e)
+		{
+			string loginUser = Login.Text;
+			string passwordUser = Password.Text;
+
+			DBUtils databaseUtils = new DBUtils();
+			DataTable dataTable = new DataTable();
+			MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+
+			MySqlCommand mySqlCommand = new MySqlCommand(
+				"SELECT * FROM coursedb.users WHERE login = @uL AND pass = @uP",
+				databaseUtils.GetConnection());
+			mySqlCommand.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+			mySqlCommand.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordUser;
+
+			mySqlDataAdapter.SelectCommand = mySqlCommand;
+			mySqlDataAdapter.Fill(dataTable);
+
+			if (dataTable.Rows.Count > 0)
+				MessageBox.Show("Good");
+			else MessageBox.Show("Bad");
 		}
 	}
 }

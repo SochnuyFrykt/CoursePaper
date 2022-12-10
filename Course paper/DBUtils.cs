@@ -27,5 +27,7 @@ namespace Course_paper
 			if (connection.State == System.Data.ConnectionState.Open)
 				connection.Close();
 		}
+
+		public MySqlConnection GetConnection() => connection;
 	}
 }
