@@ -28,5 +28,14 @@ namespace Course_paper
 		{
 			WindowState = FormWindowState.Minimized;
 		}
+
+		public static void ShowHelp(Label button)
+		{
+			button.MouseClick += (s, n) =>
+			{
+				var help = new Help();
+				help.Show();
+			};
+		}
 	}
 }

@@ -34,7 +34,7 @@
 			this.CollapsButton = new System.Windows.Forms.Label();
 			this.CloseButton = new System.Windows.Forms.Label();
 			this.BottomPanel = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
+			this.helpButton = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -97,7 +97,7 @@
 			// BottomPanel
 			// 
 			this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-			this.BottomPanel.Controls.Add(this.label1);
+			this.BottomPanel.Controls.Add(this.helpButton);
 			this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.BottomPanel.Location = new System.Drawing.Point(0, 420);
@@ -105,16 +105,17 @@
 			this.BottomPanel.Size = new System.Drawing.Size(350, 30);
 			this.BottomPanel.TabIndex = 1;
 			// 
-			// label1
+			// helpButton
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label1.Location = new System.Drawing.Point(3, 3);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(72, 20);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Помощь";
+			this.helpButton.AutoSize = true;
+			this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.helpButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.helpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.helpButton.Location = new System.Drawing.Point(3, 3);
+			this.helpButton.Name = "helpButton";
+			this.helpButton.Size = new System.Drawing.Size(72, 20);
+			this.helpButton.TabIndex = 0;
+			this.helpButton.Text = "Помощь";
 			// 
 			// label2
 			// 
@@ -181,7 +182,7 @@
 		private System.Windows.Forms.Panel BottomPanel;
 		private System.Windows.Forms.Label CloseButton;
 		private System.Windows.Forms.Label CollapsButton;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label helpButton;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel panel1;

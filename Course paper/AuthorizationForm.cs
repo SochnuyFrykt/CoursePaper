@@ -18,6 +18,7 @@ namespace Course_paper
 			ClassComand.SwitchColorButton(CloseButton);
 			ClassComand.SwitchColorButton(CollapsButton);
 			ClassComand.Close(CloseButton);
+			ClassComand.ShowHelp(helpButton);
 		}
 
 		Point lastPoint;

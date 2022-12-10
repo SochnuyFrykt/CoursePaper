@@ -10,68 +10,58 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class Template : Form
-    {
-        public Template()
-        {
-            InitializeComponent();
-        }
+	public partial class Template : Form
+	{
+		public Template()
+		{
+			InitializeComponent();
+			ClassComand.SwitchColorButton(CloseButton);
+			ClassComand.SwitchColorButton(CollapsButton);
+			ClassComand.Close(CloseButton);
+			ClassComand.ShowHelp(helpButton);
+		}
 
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+		private void HideButton_Click(object sender, EventArgs e)
+		{
+			WindowState = FormWindowState.Minimized;
+		}
 
-        private void CloseButton_MouseEnter(object sender, EventArgs e)
-        {
-            CloseButton.ForeColor = Color.FromArgb(149, 149, 149);
-        }
+		private void HideButton_MouseEnter(object sender, EventArgs e)
+		{
+			CollapsButton.ForeColor = Color.FromArgb(149, 149, 149);
+		}
 
-        private void CloseButton_MouseLeave(object sender, EventArgs e)
-        {
-            CloseButton.ForeColor = Color.White;
-        }
+		private void HideButton_MouseLeave(object sender, EventArgs e)
+		{
+			CollapsButton.ForeColor = Color.White;
+		}
 
-        private void HideButton_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+		Point lastPoint;
+		private void panel2_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				Left += e.X - lastPoint.X;
+				Top += e.Y - lastPoint.Y;
+			}
+		}
 
-        private void HideButton_MouseEnter(object sender, EventArgs e)
-        {
-            HideButton.ForeColor = Color.FromArgb(149, 149, 149);
-        }
+		private void panel2_MouseDown(object sender, MouseEventArgs e)
+		{
+			lastPoint = new Point(e.X, e.Y);
+		}
 
-        private void HideButton_MouseLeave(object sender, EventArgs e)
-        {
-            HideButton.ForeColor = Color.White;
-        }
+		private void ButtonHelp_Click(object sender, EventArgs e)
+		{
+			Help help = new Help();
+			help.Show();
+		}
 
-        Point lastPoint;
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Left += e.X - lastPoint.X;
-                Top += e.Y - lastPoint.Y;
-            }
-        }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-        private void ButtonHelp_Click(object sender, EventArgs e)
-        {
-            Help help = new Help();
-            help.Show();
-        }
-
-        public virtual void ButtonBack_Click(object sender, EventArgs e)
-        {
-            //var form1 = new SignInForm();
-            //form1.Show();
-            //Hide();
-        }
-    }
+		public virtual void ButtonBack_Click(object sender, EventArgs e)
+		{
+			//var form1 = new SignInForm();
+			//form1.Show();
+			//Hide();
+		}
+	}
 }
