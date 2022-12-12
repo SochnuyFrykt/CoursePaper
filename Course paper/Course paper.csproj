@@ -58,58 +58,19 @@
     </Compile>
     <Compile Include="DBUtils.cs" />
     <Compile Include="ClassComand.cs" />
-    <Compile Include="Docs.cs">
+    <Compile Include="MainManuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docs.Designer.cs">
-      <DependentUpon>Docs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InformationAboutObjects.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InformationAboutObjects.Designer.cs">
-      <DependentUpon>InformationAboutObjects.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Monitoring.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Monitoring.Designer.cs">
-      <DependentUpon>Monitoring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Orders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Orders.Designer.cs">
-      <DependentUpon>Orders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SalaryCalculation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SalaryCalculation.Designer.cs">
-      <DependentUpon>SalaryCalculation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Template.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
+    <Compile Include="MainManuForm.Designer.cs">
+      <DependentUpon>MainManuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainManuForm.resx">
+      <DependentUpon>MainManuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,9 +81,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

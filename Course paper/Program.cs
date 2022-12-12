@@ -16,7 +16,7 @@ namespace Course_paper
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new AuthorizationForm());
+			Application.Run(new MainManuForm());
 		}
 	}
 }

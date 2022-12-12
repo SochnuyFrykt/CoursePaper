@@ -31,11 +31,11 @@ namespace Course_paper
 
 		public static void ShowHelp(Label button)
 		{
-			button.MouseClick += (s, n) =>
-			{
-				var help = new Help();
-				help.Show();
-			};
+			//button.MouseClick += (s, n) =>
+			//{
+			//	var help = new Help();
+			//	help.Show();
+			//};
 		}
 	}
 }

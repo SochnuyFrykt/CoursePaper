@@ -61,8 +61,13 @@ namespace Course_paper
 			mySqlDataAdapter.Fill(dataTable);
 
 			if (dataTable.Rows.Count > 0)
-				MessageBox.Show("Good");
-			else MessageBox.Show("Bad");
+			{
+				var mainManu = new MainManuForm();
+				mainManu.Show();
+				Hide();
+			}
+			else MessageBox.Show("Логин или пароль введены неверно!!!");
+			databaseUtils.CloseConnection();
 		}
 	}
 }
