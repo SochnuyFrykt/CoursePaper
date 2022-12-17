@@ -145,12 +145,13 @@
             this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.MonitoringButton.ForeColor = System.Drawing.Color.White;
-            this.MonitoringButton.Location = new System.Drawing.Point(807, 365);
+            this.MonitoringButton.Location = new System.Drawing.Point(822, 406);
             this.MonitoringButton.Name = "MonitoringButton";
-            this.MonitoringButton.Size = new System.Drawing.Size(165, 88);
+            this.MonitoringButton.Size = new System.Drawing.Size(150, 47);
             this.MonitoringButton.TabIndex = 13;
-            this.MonitoringButton.Text = "Мониторинг деятельности";
+            this.MonitoringButton.Text = "Отправить";
             this.MonitoringButton.UseVisualStyleBackColor = false;
+            this.MonitoringButton.Click += new System.EventHandler(this.MonitoringButton_Click);
             // 
             // Orders
             // 

@@ -60,5 +60,10 @@ namespace Course_paper
         {
 
         }
+
+        private void MonitoringButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
