@@ -55,5 +55,10 @@ namespace Course_paper
             formtoopen.Show();
             Hide();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

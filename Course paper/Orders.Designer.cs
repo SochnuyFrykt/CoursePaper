@@ -35,6 +35,8 @@
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MonitoringButton = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -127,12 +129,37 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 36);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(976, 428);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Введите перечень вашего заказа...";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // MonitoringButton
+            // 
+            this.MonitoringButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.MonitoringButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.MonitoringButton.ForeColor = System.Drawing.Color.White;
+            this.MonitoringButton.Location = new System.Drawing.Point(807, 365);
+            this.MonitoringButton.Name = "MonitoringButton";
+            this.MonitoringButton.Size = new System.Drawing.Size(165, 88);
+            this.MonitoringButton.TabIndex = 13;
+            this.MonitoringButton.Text = "Мониторинг деятельности";
+            this.MonitoringButton.UseVisualStyleBackColor = false;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.MonitoringButton);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,5 +183,7 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button MonitoringButton;
     }
 }
