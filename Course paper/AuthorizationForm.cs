@@ -99,6 +99,27 @@ namespace Course_paper
 					mainManu.Show();
 					Hide();
 					break;
+				case "Инженер":
+					var generalDocs = new GeneralDocs();
+                    generalDocs.Show();
+					Hide();
+                    break;
+				case "Производитель работ":
+					var orders = new Orders();
+					orders.Show(); Hide();
+					break;
+				case "Конструктор":
+					var blueprints = new Blueprints();
+					blueprints.Show(); Hide();
+					break;
+				case "Архитектор":
+					var docs = new GeneralDocs();
+					docs.Show(); Hide();
+					break;
+				case "Финансовый менеджер":
+					var completedTasks = new CompletedTasks();
+					completedTasks.Show(); Hide();
+					break;
 			}
             conn.Close();
         }
