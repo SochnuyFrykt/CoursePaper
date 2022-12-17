@@ -35,6 +35,8 @@
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MonitoringButton = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,7 @@
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "<";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -72,7 +75,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(443, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Заказы";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,7 +112,7 @@
             this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 420);
+            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
@@ -126,16 +129,42 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
-            // MainManuForm
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 36);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(976, 428);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Введите перечень вашего заказа...";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // MonitoringButton
+            // 
+            this.MonitoringButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.MonitoringButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.MonitoringButton.ForeColor = System.Drawing.Color.White;
+            this.MonitoringButton.Location = new System.Drawing.Point(807, 365);
+            this.MonitoringButton.Name = "MonitoringButton";
+            this.MonitoringButton.Size = new System.Drawing.Size(165, 88);
+            this.MonitoringButton.TabIndex = 13;
+            this.MonitoringButton.Text = "Мониторинг деятельности";
+            this.MonitoringButton.UseVisualStyleBackColor = false;
+            // 
+            // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.MonitoringButton);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Orders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orders";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
@@ -154,5 +183,7 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button MonitoringButton;
     }
 }

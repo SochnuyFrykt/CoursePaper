@@ -56,11 +56,29 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blueprints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blueprints.Designer.cs">
+      <DependentUpon>Blueprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompletedTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompletedTasks.Designer.cs">
+      <DependentUpon>CompletedTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Docs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Docs.Designer.cs">
       <DependentUpon>Docs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralDocs.Designer.cs">
+      <DependentUpon>GeneralDocs.cs</DependentUpon>
     </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
@@ -82,12 +100,6 @@
     </Compile>
     <Compile Include="MainManuForm.Designer.cs">
       <DependentUpon>MainManuForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainMenuWorker.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenuWorker.Designer.cs">
-      <DependentUpon>MainMenuWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitoring.cs">
       <SubType>Form</SubType>
@@ -112,8 +124,17 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Blueprints.resx">
+      <DependentUpon>Blueprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletedTasks.resx">
+      <DependentUpon>CompletedTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docs.resx">
       <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDocs.resx">
+      <DependentUpon>GeneralDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
@@ -124,6 +145,12 @@
     <EmbeddedResource Include="MainManuForm.resx">
       <DependentUpon>MainManuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Monitoring.resx">
+      <DependentUpon>Monitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,6 +160,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SalaryCalculation.resx">
+      <DependentUpon>SalaryCalculation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

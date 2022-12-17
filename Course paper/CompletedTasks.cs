@@ -10,10 +10,18 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class SalaryCalculation : Form
+    public partial class CompletedTasks : Form
     {
         Form formtoopen;
-        public SalaryCalculation(MainManuForm form)
+        public CompletedTasks()
+        {
+            InitializeComponent();
+            ClassComand.SwitchColorButton(CloseButton);
+            ClassComand.SwitchColorButton(CollapsButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
+        }
+        public CompletedTasks(MainManuForm form)
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);

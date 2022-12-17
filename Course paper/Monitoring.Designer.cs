@@ -64,6 +64,7 @@
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "<";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -72,7 +73,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(443, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(202, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Мониторинг деятельности";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,7 +110,7 @@
             this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 420);
+            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
@@ -131,11 +132,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Monitoring";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monitoring";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();

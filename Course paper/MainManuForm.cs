@@ -17,6 +17,9 @@ namespace Course_paper
         SalaryCalculation salary;
         Orders orders;
         Docs docs;
+        CompletedTasks completedTasks;
+        GeneralDocs generalDocs;
+        Blueprints blueprints;
         public MainManuForm()
 		{
 			InitializeComponent();
@@ -25,12 +28,14 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
             info = new InformationAboutObjects(this);
-            //monitoring = new Monitoring(this);
-            //salary = new SalaryCalculation(this);
-            //orders = new Orders(this);
+            monitoring = new Monitoring(this);
+            salary = new SalaryCalculation(this);
+            orders = new Orders(this);
             docs = new Docs(this);
+            completedTasks = new CompletedTasks(this);
+            generalDocs = new GeneralDocs(this);
+            blueprints = new Blueprints(this);
         }
-
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -40,7 +45,6 @@ namespace Course_paper
 				Top += e.Y - lastPoint.Y;
 			}
 		}
-
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
@@ -56,7 +60,7 @@ namespace Course_paper
             Hide();
         }
 
-        private void ActivityTrackingButton_Click(object sender, EventArgs e)
+        private void MonitoringButton_Click(object sender, EventArgs e)
         {
             monitoring.Show();
             Hide();
@@ -78,7 +82,21 @@ namespace Course_paper
         {
             docs.Show();
             Hide();
-
+        }
+        private void CompletedTasksButton_Click(object sender, EventArgs e)
+        {
+            completedTasks.Show();
+            Hide();
+        }
+        private void BlueprintsButton_Click(object sender, EventArgs e)
+        {
+            blueprints.Show();
+            Hide();
+        }
+        private void GeneralDocsButton_Click(object sender, EventArgs e)
+        {
+            generalDocs.Show();
+            Hide();
         }
 
         private void MainManuForm_Load(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace Course_paper
 {
-    partial class MainMenuWorker
+    partial class CompletedTasks
     {
         /// <summary>
         /// Required designer variable.
@@ -64,6 +64,7 @@
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "<";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -72,9 +73,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(443, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(167, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Главное меню";
+            this.label3.Text = "Выполненные задачи";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.UseMnemonic = false;
             // 
@@ -126,17 +127,18 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
-            // MainManuForm
+            // CompletedTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainMenuWorker";
-            this.Text = "MainMenuWorker";
+            this.Name = "CompletedTasks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.BottomPanel.ResumeLayout(false);

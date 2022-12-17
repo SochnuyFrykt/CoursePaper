@@ -33,6 +33,14 @@ namespace Course_paper
             ClassComand.ShowHelp(helpButton);
             formtoopen = form;
         }
+        public Docs()
+        {
+            InitializeComponent();
+            ClassComand.SwitchColorButton(CloseButton);
+            ClassComand.SwitchColorButton(CollapsButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
+        }
 
         Point lastPoint;
         private void TopPanel_MouseMove(object sender, MouseEventArgs e)

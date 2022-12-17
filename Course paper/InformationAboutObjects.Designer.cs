@@ -110,7 +110,7 @@
             this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 420);
+            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
@@ -132,11 +132,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1000, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformationAboutObjects";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformationAboutObjects";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();

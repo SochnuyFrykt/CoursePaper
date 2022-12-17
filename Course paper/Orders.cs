@@ -12,6 +12,16 @@ namespace Course_paper
 {
     public partial class Orders : Form
     {
+        Form formtoopen;
+        public Orders(MainManuForm form)
+        {
+            InitializeComponent();
+            ClassComand.SwitchColorButton(CloseButton);
+            ClassComand.SwitchColorButton(CollapsButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
+            formtoopen = form;
+        }
         public Orders()
         {
             InitializeComponent();
@@ -20,7 +30,6 @@ namespace Course_paper
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
         }
-
         Point lastPoint;
         private void TopPanel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -39,6 +48,17 @@ namespace Course_paper
         private void CollapsButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            formtoopen.Show();
+            Hide();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
