@@ -261,6 +261,7 @@ namespace Course_paper
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainManuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainManuForm";
             this.Load += new System.EventHandler(this.MainManuForm_Load);
             this.TopPanel.ResumeLayout(false);

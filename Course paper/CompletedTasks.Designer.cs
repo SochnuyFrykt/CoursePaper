@@ -137,6 +137,7 @@
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CompletedTasks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
