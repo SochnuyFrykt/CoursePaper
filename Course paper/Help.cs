@@ -42,7 +42,7 @@ namespace Course_paper
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            Close();
         }
     }
 }
