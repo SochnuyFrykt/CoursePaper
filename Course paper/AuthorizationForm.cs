@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Course_paper
 {
@@ -51,6 +52,7 @@ namespace Course_paper
 			DataTable dataTable = new DataTable();
 			MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
 
+
 			MySqlCommand mySqlCommand = new MySqlCommand(
 				"SELECT * FROM coursedb.users WHERE login = @uL AND pass = @uP",
 				databaseUtils.GetConnection());
@@ -62,12 +64,43 @@ namespace Course_paper
 
 			if (dataTable.Rows.Count > 0)
 			{
-				var mainManu = new MainManuForm();
-				mainManu.Show();
-				Hide();
+				UserRole();
 			}
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
 		}
+
+		public void UserRole()
+		{
+            string UserName = Login.Text; ;
+
+            string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
+            string sql = "SELECT Post FROM coursedb.users WHERE `login` = @un";
+
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+
+            MySqlParameter nameParam = new MySqlParameter("@un", UserName);
+
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            command.Parameters.Add(nameParam);
+
+            string Form_Role = command.ExecuteScalar().ToString();
+
+			//         Switch(Form_Role)
+			//{
+			//	case "Администратор": Form.ActiveForm.Close(); Form1 f1 = new Form1(); f1.Show(); break;
+			//             default:  Form.ActiveForm.Close(); Form2 f2 = new Form2(); f2.Show();
+			//         }
+			switch (Form_Role)
+			{
+				case "Генеральный директор":
+					var mainManu = new MainManuForm();
+					mainManu.Show();
+					Hide();
+					break;
+			}
+            conn.Close();
+        }
 	}
 }
