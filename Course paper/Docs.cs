@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class SalaryCalculation : Form
+    public partial class Docs : Form
     {
-        public SalaryCalculation()
+        public Docs()
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);

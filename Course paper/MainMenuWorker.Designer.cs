@@ -1,6 +1,6 @@
 ﻿namespace Course_paper
 {
-    partial class InformationAboutObjects
+    partial class MainMenuWorker
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Информация об объектах";
+            this.label3.Text = "Главное меню";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.UseMnemonic = false;
             // 
@@ -135,8 +135,8 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InformationAboutObjects";
-            this.Text = "InformationAboutObjects";
+            this.Name = "MainMenuWorker";
+            this.Text = "MainMenuWorker";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.BottomPanel.ResumeLayout(false);
@@ -155,3 +155,4 @@
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
     }
+}
