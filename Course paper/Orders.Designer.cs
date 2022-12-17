@@ -36,7 +36,7 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.MonitoringButton = new System.Windows.Forms.Button();
+            this.SendButton = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -138,20 +138,19 @@
             this.richTextBox1.Text = "Введите перечень вашего заказа...";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // MonitoringButton
+            // SendButton
             // 
-            this.MonitoringButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.MonitoringButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.MonitoringButton.ForeColor = System.Drawing.Color.White;
-            this.MonitoringButton.Location = new System.Drawing.Point(822, 406);
-            this.MonitoringButton.Name = "MonitoringButton";
-            this.MonitoringButton.Size = new System.Drawing.Size(150, 47);
-            this.MonitoringButton.TabIndex = 13;
-            this.MonitoringButton.Text = "Отправить";
-            this.MonitoringButton.UseVisualStyleBackColor = false;
-            this.MonitoringButton.Click += new System.EventHandler(this.MonitoringButton_Click);
+            this.SendButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.SendButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SendButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SendButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.SendButton.ForeColor = System.Drawing.Color.White;
+            this.SendButton.Location = new System.Drawing.Point(822, 421);
+            this.SendButton.Name = "SendButton";
+            this.SendButton.Size = new System.Drawing.Size(150, 30);
+            this.SendButton.TabIndex = 20;
+            this.SendButton.Text = "Отправить заявку";
+            this.SendButton.UseVisualStyleBackColor = false;
             // 
             // Orders
             // 
@@ -159,7 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.MonitoringButton);
+            this.Controls.Add(this.SendButton);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
@@ -185,6 +184,6 @@
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button MonitoringButton;
+        private System.Windows.Forms.Button SendButton;
     }
 }
