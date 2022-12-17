@@ -12,13 +12,15 @@ namespace Course_paper
 {
     public partial class SalaryCalculation : Form
     {
-        public SalaryCalculation()
+        Form formtoopen;
+        public SalaryCalculation(MainManuForm form)
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            formtoopen = form;
         }
 
         Point lastPoint;
@@ -43,7 +45,8 @@ namespace Course_paper
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            formtoopen.Show();
+            Hide();
         }
     }
 }

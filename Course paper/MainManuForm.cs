@@ -17,9 +17,9 @@ namespace Course_paper
         SalaryCalculation salary;
         Orders orders;
         Docs docs;
-        CompletedTasks tasks;
-        Blueprints print;
-        GeneralDocs general;
+        CompletedTasks completedTasks;
+        GeneralDocs generalDocs;
+        Blueprints blueprints;
         public MainManuForm()
 		{
 			InitializeComponent();
@@ -29,9 +29,12 @@ namespace Course_paper
 			ClassComand.ShowHelp(helpButton);
             info = new InformationAboutObjects(this);
             monitoring = new Monitoring(this);
-            //salary = new SalaryCalculation(this);
+            salary = new SalaryCalculation(this);
             orders = new Orders(this);
             docs = new Docs(this);
+            completedTasks = new CompletedTasks(this);
+            generalDocs = new GeneralDocs(this);
+            blueprints = new Blueprints(this);
         }
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -82,17 +85,17 @@ namespace Course_paper
         }
         private void CompletedTasksButton_Click(object sender, EventArgs e)
         {
-            tasks.Show();
+            completedTasks.Show();
             Hide();
         }
         private void BlueprintsButton_Click(object sender, EventArgs e)
         {
-            print.Show();
+            blueprints.Show();
             Hide();
         }
         private void GeneralDocsButton_Click(object sender, EventArgs e)
         {
-            general.Show();
+            generalDocs.Show();
             Hide();
         }
 

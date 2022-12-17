@@ -124,8 +124,17 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Blueprints.resx">
+      <DependentUpon>Blueprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletedTasks.resx">
+      <DependentUpon>CompletedTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docs.resx">
       <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralDocs.resx">
+      <DependentUpon>GeneralDocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
