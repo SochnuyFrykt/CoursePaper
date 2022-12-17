@@ -17,12 +17,6 @@ namespace Course_paper
 			button.MouseLeave += (s, n) =>
 				button.ForeColor = Color.White;
 		}
-		//public static void ReturnBack(Label buttonBack)
-		//{
-  //          buttonBack.MouseClick += (s, n) =>
-  //              buttonBack.
-
-  //      }
 
         public static void Close(Label button)
 		{
