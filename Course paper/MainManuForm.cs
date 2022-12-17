@@ -17,6 +17,9 @@ namespace Course_paper
         SalaryCalculation salary;
         Orders orders;
         Docs docs;
+        CompletedTasks tasks;
+        Blueprints print;
+        GeneralDocs general;
         public MainManuForm()
 		{
 			InitializeComponent();
@@ -56,7 +59,7 @@ namespace Course_paper
             Hide();
         }
 
-        private void ActivityTrackingButton_Click(object sender, EventArgs e)
+        private void MonitoringButton_Click(object sender, EventArgs e)
         {
             monitoring.Show();
             Hide();
@@ -78,7 +81,21 @@ namespace Course_paper
         {
             docs.Show();
             Hide();
-
+        }
+        private void CompletedTasksButton_Click(object sender, EventArgs e)
+        {
+            tasks.Show();
+            Hide();
+        }
+        private void BlueprintsButton_Click(object sender, EventArgs e)
+        {
+            print.Show();
+            Hide();
+        }
+        private void GeneralDocsButton_Click(object sender, EventArgs e)
+        {
+            general.Show();
+            Hide();
         }
 
         private void MainManuForm_Load(object sender, EventArgs e)
