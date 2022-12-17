@@ -23,6 +23,14 @@ namespace Course_paper
 			button.MouseClick += (s, n) =>
 				Application.Exit();
 		}
+		public static void Hide(Label button)
+		{
+			button.MouseClick += (s, n) =>
+			{
+				var help = new Help();
+				help.Hide();
+			};
+        }
 
 		public static void Collaps(FormWindowState WindowState)
 		{
@@ -31,11 +39,11 @@ namespace Course_paper
 
 		public static void ShowHelp(Label button)
 		{
-			//button.MouseClick += (s, n) =>
-			//{
-			//	var help = new Help();
-			//	help.Show();
-			//};
-		}
+			button.MouseClick += (s, n) =>
+			{
+				var help = new Help();
+				help.Show();
+			};
+        }
 	}
 }
