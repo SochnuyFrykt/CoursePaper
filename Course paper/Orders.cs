@@ -10,39 +10,35 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class Orders : Template
+    public partial class Orders : Form
     {
-        Form formtoopen;
-        public Orders(MainMenu form)
+        public Orders()
         {
             InitializeComponent();
-            formtoopen = form;
-        }
-        //public Orders(MainMenuWorker form)
-        //{
-        //    InitializeComponent();
-        //    formtoopen = form;
-        //}
-        public override void ButtonBack_Click(object sender, EventArgs e)
-        {
-            formtoopen.Show();
-            Hide();
+            ClassComand.SwitchColorButton(CloseButton);
+            ClassComand.SwitchColorButton(CollapsButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        Point lastPoint;
+        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
         {
-
+            if (e.Button == MouseButtons.Left)
+            {
+                Left += e.X - lastPoint.X;
+                Top += e.Y - lastPoint.Y;
+            }
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {
-            base.OnShown(e);
-            ActiveControl = null;
+            lastPoint = new Point(e.X, e.Y);
         }
 
-        private void SendButton_Click(object sender, EventArgs e)
+        private void CollapsButton_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

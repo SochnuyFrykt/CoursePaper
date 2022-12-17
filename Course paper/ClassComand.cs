@@ -17,16 +17,39 @@ namespace Course_paper
 			button.MouseLeave += (s, n) =>
 				button.ForeColor = Color.White;
 		}
+		//public static void ReturnBack(Label buttonBack)
+		//{
+  //          buttonBack.MouseClick += (s, n) =>
+  //              buttonBack.
 
-		public static void Close(Label button)
+  //      }
+
+        public static void Close(Label button)
 		{
 			button.MouseClick += (s, n) =>
 				Application.Exit();
 		}
+		public static void Hide(Label button)
+		{
+			button.MouseClick += (s, n) =>
+			{
+				var help = new Help();
+				help.Hide();
+			};
+        }
 
 		public static void Collaps(FormWindowState WindowState)
 		{
 			WindowState = FormWindowState.Minimized;
 		}
+
+		public static void ShowHelp(Label button)
+		{
+			button.MouseClick += (s, n) =>
+			{
+				var help = new Help();
+				help.Show();
+			};
+        }
 	}
 }

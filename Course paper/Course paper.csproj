@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.31\Assemblies\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,7 +56,6 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassComand.cs" />
     <Compile Include="Docs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,17 +68,26 @@
     <Compile Include="Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="Identifier.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="ClassComand.cs" />
     <Compile Include="InformationAboutObjects.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformationAboutObjects.Designer.cs">
       <DependentUpon>InformationAboutObjects.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="MainManuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="MainManuForm.Designer.cs">
+      <DependentUpon>MainManuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuWorker.Designer.cs">
+      <DependentUpon>MainMenuWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitoring.cs">
       <SubType>Form</SubType>
@@ -89,22 +101,28 @@
     <Compile Include="Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaryCalculation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SalaryCalculation.Designer.cs">
       <DependentUpon>SalaryCalculation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docs.resx">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationAboutObjects.resx">
+      <DependentUpon>InformationAboutObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainManuForm.resx">
+      <DependentUpon>MainManuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,9 +133,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

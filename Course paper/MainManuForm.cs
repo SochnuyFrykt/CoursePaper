@@ -10,23 +10,46 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class MainMenu : Template
-    {
+	public partial class MainManuForm : Form
+	{
         InformationAboutObjects info;
         Monitoring monitoring;
         SalaryCalculation salary;
         Orders orders;
         Docs docs;
-        public MainMenu()
-        {
-            InitializeComponent();
+        public MainManuForm()
+		{
+			InitializeComponent();
+			ClassComand.SwitchColorButton(CloseButton);
+			ClassComand.SwitchColorButton(CollapsButton);
+			ClassComand.Close(CloseButton);
+			ClassComand.ShowHelp(helpButton);
             info = new InformationAboutObjects(this);
-            monitoring = new Monitoring(this);
-            salary = new SalaryCalculation(this);
-            orders = new Orders(this);
+            //monitoring = new Monitoring(this);
+            //salary = new SalaryCalculation(this);
+            //orders = new Orders(this);
             docs = new Docs(this);
         }
 
+		Point lastPoint;
+		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				Left += e.X - lastPoint.X;
+				Top += e.Y - lastPoint.Y;
+			}
+		}
+
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+		{
+			lastPoint = new Point(e.X, e.Y);
+		}
+
+		private void CollapsButton_Click(object sender, EventArgs e)
+		{
+			WindowState = FormWindowState.Minimized;
+		}
         private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
         {
             info.Show();
@@ -58,7 +81,7 @@ namespace Course_paper
 
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void MainManuForm_Load(object sender, EventArgs e)
         {
 
         }

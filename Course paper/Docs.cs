@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Course_paper
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public partial class Docs : Form
     {
         public Docs()
@@ -18,14 +19,42 @@ namespace Course_paper
             InitializeComponent();
 =======
     public partial class Docs : Template
+=======
+    public partial class Docs : Form
+>>>>>>> Development
     {
         Form formtoopen;
-        public Docs(MainMenu form)
+        public Docs(MainManuForm form)
         {
             InitializeComponent();
+            ClassComand.SwitchColorButton(CloseButton);
+            ClassComand.SwitchColorButton(CollapsButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
             formtoopen = form;
         }
-        public override void ButtonBack_Click(object sender, EventArgs e)
+
+        Point lastPoint;
+        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Left += e.X - lastPoint.X;
+                Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void CollapsButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             formtoopen.Show();
             Hide();
