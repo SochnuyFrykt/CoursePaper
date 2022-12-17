@@ -1,6 +1,6 @@
 ﻿namespace Course_paper
 {
-    partial class Help
+    partial class InformationAboutObjects
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,9 @@
             this.CollapsButton = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
+            this.helpButton = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
+            this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -70,9 +72,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(443, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.Size = new System.Drawing.Size(114, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Помощь";
+            this.label3.Text = "Информация об объектах";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.UseMnemonic = false;
             // 
@@ -100,11 +102,11 @@
             this.CloseButton.Size = new System.Drawing.Size(19, 18);
             this.CloseButton.TabIndex = 0;
             this.CloseButton.Text = "X";
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // BottomPanel
             // 
             this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
+            this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BottomPanel.Location = new System.Drawing.Point(0, 420);
@@ -112,7 +114,19 @@
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
             // 
-            // Help
+            // helpButton
+            // 
+            this.helpButton.AutoSize = true;
+            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.helpButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.helpButton.Location = new System.Drawing.Point(3, 3);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(72, 20);
+            this.helpButton.TabIndex = 0;
+            this.helpButton.Text = "Помощь";
+            // 
+            // MainManuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,10 +135,12 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Help";
-            this.Text = "Help";
+            this.Name = "InformationAboutObjects";
+            this.Text = "InformationAboutObjects";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
+            this.BottomPanel.ResumeLayout(false);
+            this.BottomPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -136,6 +152,6 @@
         private System.Windows.Forms.Label CollapsButton;
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.Panel BottomPanel;
+        private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
     }
-}

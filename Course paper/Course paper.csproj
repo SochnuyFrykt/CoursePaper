@@ -71,6 +71,12 @@
     <Compile Include="MainManuForm.Designer.cs">
       <DependentUpon>MainManuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Monitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoring.Designer.cs">
+      <DependentUpon>Monitoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">

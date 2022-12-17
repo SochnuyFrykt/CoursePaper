@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class Help : Form
+    public partial class InformationAboutObjects : Form
     {
-        public Help()
+        public InformationAboutObjects()
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);
             ClassComand.SwitchColorButton(CollapsButton);
-            ClassComand.Hide(CloseButton);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
         }
+
         Point lastPoint;
         private void TopPanel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -37,11 +39,6 @@ namespace Course_paper
         private void CollapsButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
