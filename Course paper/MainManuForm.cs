@@ -28,12 +28,11 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
             info = new InformationAboutObjects(this);
-            //monitoring = new Monitoring(this);
+            monitoring = new Monitoring(this);
             //salary = new SalaryCalculation(this);
-            //orders = new Orders(this);
+            orders = new Orders(this);
             docs = new Docs(this);
         }
-
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -43,7 +42,6 @@ namespace Course_paper
 				Top += e.Y - lastPoint.Y;
 			}
 		}
-
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
