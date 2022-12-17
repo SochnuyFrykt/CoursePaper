@@ -35,6 +35,9 @@
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
+            this.MonitoringButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -127,12 +130,57 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
+            // MonitoringButton
+            // 
+            this.MonitoringButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.MonitoringButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.MonitoringButton.ForeColor = System.Drawing.Color.White;
+            this.MonitoringButton.Location = new System.Drawing.Point(226, 164);
+            this.MonitoringButton.Name = "MonitoringButton";
+            this.MonitoringButton.Size = new System.Drawing.Size(165, 88);
+            this.MonitoringButton.TabIndex = 13;
+            this.MonitoringButton.Text = "Мониторинг деятельности";
+            this.MonitoringButton.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(422, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 88);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Мониторинг деятельности";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(621, 164);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 88);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Мониторинг деятельности";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Docs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MonitoringButton);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,5 +204,8 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label ButtonBack;
+        private System.Windows.Forms.Button MonitoringButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
