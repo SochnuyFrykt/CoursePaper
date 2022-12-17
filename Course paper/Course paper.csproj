@@ -56,6 +56,12 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Docs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docs.Designer.cs">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,23 @@
     <Compile Include="Identifier.cs" />
     <Compile Include="DBUtils.cs" />
     <Compile Include="ClassComand.cs" />
+    <Compile Include="InformationAboutObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationAboutObjects.Designer.cs">
+      <DependentUpon>InformationAboutObjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainManuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainManuForm.Designer.cs">
       <DependentUpon>MainManuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuWorker.Designer.cs">
+      <DependentUpon>MainMenuWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="Monitoring.cs">
       <SubType>Form</SubType>
@@ -77,13 +95,31 @@
     <Compile Include="Monitoring.Designer.cs">
       <DependentUpon>Monitoring.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaryCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryCalculation.Designer.cs">
+      <DependentUpon>SalaryCalculation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Docs.resx">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationAboutObjects.resx">
+      <DependentUpon>InformationAboutObjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainManuForm.resx">
       <DependentUpon>MainManuForm.cs</DependentUpon>

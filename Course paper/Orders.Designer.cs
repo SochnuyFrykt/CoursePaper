@@ -155,3 +155,4 @@
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
     }
+}

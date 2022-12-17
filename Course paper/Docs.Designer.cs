@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ButtonBack = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CollapsButton = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-            this.TopPanel.Controls.Add(this.label2);
+            this.TopPanel.Controls.Add(this.ButtonBack);
             this.TopPanel.Controls.Add(this.label3);
             this.TopPanel.Controls.Add(this.CollapsButton);
             this.TopPanel.Controls.Add(this.CloseButton);
@@ -54,16 +54,17 @@
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
             // 
-            // label2
+            // ButtonBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "<";
+            this.ButtonBack.AutoSize = true;
+            this.ButtonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonBack.Location = new System.Drawing.Point(3, 2);
+            this.ButtonBack.Name = "ButtonBack";
+            this.ButtonBack.Size = new System.Drawing.Size(25, 25);
+            this.ButtonBack.TabIndex = 6;
+            this.ButtonBack.Text = "<";
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // label3
             // 
@@ -72,7 +73,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(443, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(214, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Формирование документов";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,7 +127,7 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
-            // MainManuForm
+            // Docs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,6 +154,6 @@
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ButtonBack;
     }
 }

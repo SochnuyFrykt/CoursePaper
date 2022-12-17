@@ -12,14 +12,24 @@ namespace Course_paper
 {
 	public partial class MainManuForm : Form
 	{
-		public MainManuForm()
+        InformationAboutObjects info;
+        Monitoring monitoring;
+        SalaryCalculation salary;
+        Orders orders;
+        Docs docs;
+        public MainManuForm()
 		{
 			InitializeComponent();
 			ClassComand.SwitchColorButton(CloseButton);
 			ClassComand.SwitchColorButton(CollapsButton);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-		}
+            info = new InformationAboutObjects(this);
+            //monitoring = new Monitoring(this);
+            //salary = new SalaryCalculation(this);
+            //orders = new Orders(this);
+            docs = new Docs(this);
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -40,5 +50,40 @@ namespace Course_paper
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-	}
+        private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
+        {
+            info.Show();
+            Hide();
+        }
+
+        private void ActivityTrackingButton_Click(object sender, EventArgs e)
+        {
+            monitoring.Show();
+            Hide();
+        }
+
+        private void SalaryCalcButton_Click(object sender, EventArgs e)
+        {
+            salary.Show();
+            Hide();
+        }
+
+        private void OrdersButton_Click(object sender, EventArgs e)
+        {
+            orders.Show();
+            Hide();
+        }
+
+        private void DocumentGenerationButton_Click(object sender, EventArgs e)
+        {
+            docs.Show();
+            Hide();
+
+        }
+
+        private void MainManuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
