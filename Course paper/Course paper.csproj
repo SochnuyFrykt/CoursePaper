@@ -92,7 +92,6 @@
     <Compile Include="WorkingForms\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
-    <Compile Include="Identifier.cs" />
     <Compile Include="WorkingForms\DBUtils.cs" />
     <Compile Include="ClassComand.cs" />
     <Compile Include="WorkingForms\InformationAboutObjects.cs">
