@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-    public partial class Blueprints : Form
+    public partial class BluePrints : Form
     {
         Form formtoopen;
-        public Blueprints()
+        public BluePrints()
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);
@@ -21,7 +21,7 @@ namespace Course_paper
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
         }
-        public Blueprints(MainManuForm form)
+        public BluePrints(MainManuForm form)
         {
             InitializeComponent();
             ClassComand.SwitchColorButton(CloseButton);

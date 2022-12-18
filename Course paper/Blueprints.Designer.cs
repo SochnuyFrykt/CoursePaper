@@ -1,6 +1,6 @@
 ﻿namespace Course_paper
 {
-    partial class Blueprints
+    partial class BluePrints
     {
         /// <summary>
         /// Required designer variable.

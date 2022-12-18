@@ -157,6 +157,7 @@
 			this.DismissalEmployee.TabIndex = 14;
 			this.DismissalEmployee.Text = "Увольнение работника";
 			this.DismissalEmployee.UseVisualStyleBackColor = false;
+			this.DismissalEmployee.Click += new System.EventHandler(this.DismissalEmployee_Click);
 			// 
 			// ContractDiller
 			// 

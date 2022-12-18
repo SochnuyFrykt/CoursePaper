@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Course_paper.DocsFolder;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Course_paper
 {
     public partial class Docs : Form
     {
-        Form formtoopen;
+        Form formToOpen;
         public Docs(MainManuForm form)
         {
             InitializeComponent();
@@ -20,8 +21,9 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
-            formtoopen = form;
+            formToOpen = form;
         }
+
         public Docs()
         {
             InitializeComponent();
@@ -53,8 +55,15 @@ namespace Course_paper
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            formtoopen.Show();
+            formToOpen.Show();
             Hide();
         }
+
+    private void DismissalEmployee_Click(object sender, EventArgs e)
+    {
+      var dismissalForm = new DismissalEmployee();
+      dismissalForm.Show();
+      Hide();
     }
+  }
 }

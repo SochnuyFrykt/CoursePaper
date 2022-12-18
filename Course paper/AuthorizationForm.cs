@@ -109,7 +109,7 @@ namespace Course_paper
 					orders.Show(); Hide();
 					break;
 				case "Конструктор":
-					var blueprints = new Blueprints();
+					var blueprints = new BluePrints();
 					blueprints.Show(); Hide();
 					break;
 				case "Архитектор":

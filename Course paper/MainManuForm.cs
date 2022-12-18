@@ -19,7 +19,7 @@ namespace Course_paper
         Docs docs;
         CompletedTasks completedTasks;
         GeneralDocs generalDocs;
-        Blueprints blueprints;
+        BluePrints blueprints;
         public MainManuForm()
 		{
 			InitializeComponent();
@@ -34,7 +34,7 @@ namespace Course_paper
             docs = new Docs(this);
             completedTasks = new CompletedTasks(this);
             generalDocs = new GeneralDocs(this);
-            blueprints = new Blueprints(this);
+            blueprints = new BluePrints(this);
         }
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)

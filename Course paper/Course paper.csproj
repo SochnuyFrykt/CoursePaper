@@ -56,11 +56,11 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Blueprints.cs">
+    <Compile Include="BluePrints.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Blueprints.Designer.cs">
-      <DependentUpon>Blueprints.cs</DependentUpon>
+    <Compile Include="BluePrints.Designer.cs">
+      <DependentUpon>BluePrints.cs</DependentUpon>
     </Compile>
     <Compile Include="CompletedTasks.cs">
       <SubType>Form</SubType>
@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Docs.Designer.cs">
       <DependentUpon>Docs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocsFolder\DismissalEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocsFolder\DismissalEmployee.Designer.cs">
+      <DependentUpon>DismissalEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralDocs.cs">
       <SubType>Form</SubType>
@@ -124,14 +130,17 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Blueprints.resx">
-      <DependentUpon>Blueprints.cs</DependentUpon>
+    <EmbeddedResource Include="BluePrints.resx">
+      <DependentUpon>BluePrints.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompletedTasks.resx">
       <DependentUpon>CompletedTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Docs.resx">
       <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocsFolder\DismissalEmployee.resx">
+      <DependentUpon>DismissalEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralDocs.resx">
       <DependentUpon>GeneralDocs.cs</DependentUpon>
