@@ -252,5 +252,5 @@
 		private System.Windows.Forms.TextBox Post;
 		private System.Windows.Forms.TextBox DismissalDate;
         private System.Windows.Forms.Button InfoAboutObjectsButton;
-    }
+	}
 }
