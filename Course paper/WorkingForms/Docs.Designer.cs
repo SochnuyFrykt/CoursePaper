@@ -37,7 +37,7 @@
 			this.helpButton = new System.Windows.Forms.Label();
 			this.AcceptanceEmployee = new System.Windows.Forms.Button();
 			this.DismissalEmployee = new System.Windows.Forms.Button();
-			this.ContractDiller = new System.Windows.Forms.Button();
+			this.ContractCustomer = new System.Windows.Forms.Button();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -159,19 +159,19 @@
 			this.DismissalEmployee.UseVisualStyleBackColor = false;
 			this.DismissalEmployee.Click += new System.EventHandler(this.DismissalEmployee_Click);
 			// 
-			// ContractDiller
+			// ContractCustomer
 			// 
-			this.ContractDiller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-			this.ContractDiller.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.ContractDiller.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.ContractDiller.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-			this.ContractDiller.ForeColor = System.Drawing.Color.White;
-			this.ContractDiller.Location = new System.Drawing.Point(621, 164);
-			this.ContractDiller.Name = "ContractDiller";
-			this.ContractDiller.Size = new System.Drawing.Size(165, 88);
-			this.ContractDiller.TabIndex = 15;
-			this.ContractDiller.Text = "Оформление контракта с заказчиком";
-			this.ContractDiller.UseVisualStyleBackColor = false;
+			this.ContractCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+			this.ContractCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.ContractCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.ContractCustomer.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.ContractCustomer.ForeColor = System.Drawing.Color.White;
+			this.ContractCustomer.Location = new System.Drawing.Point(621, 164);
+			this.ContractCustomer.Name = "ContractCustomer";
+			this.ContractCustomer.Size = new System.Drawing.Size(165, 88);
+			this.ContractCustomer.TabIndex = 15;
+			this.ContractCustomer.Text = "Оформление контракта с заказчиком";
+			this.ContractCustomer.UseVisualStyleBackColor = false;
 			// 
 			// Docs
 			// 
@@ -179,7 +179,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(1000, 500);
-			this.Controls.Add(this.ContractDiller);
+			this.Controls.Add(this.ContractCustomer);
 			this.Controls.Add(this.DismissalEmployee);
 			this.Controls.Add(this.AcceptanceEmployee);
 			this.Controls.Add(this.BottomPanel);
@@ -207,6 +207,6 @@
         private System.Windows.Forms.Label ButtonBack;
         private System.Windows.Forms.Button AcceptanceEmployee;
         private System.Windows.Forms.Button DismissalEmployee;
-        private System.Windows.Forms.Button ContractDiller;
+        private System.Windows.Forms.Button ContractCustomer;
     }
 }
