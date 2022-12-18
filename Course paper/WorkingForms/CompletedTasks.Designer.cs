@@ -35,8 +35,15 @@
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -110,7 +117,7 @@
             this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 420);
+            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
@@ -127,22 +134,64 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Namee,
+            this.Number,
+            this.Customer,
+            this.Date,
+            this.Cost});
+            this.dataGridView2.Location = new System.Drawing.Point(12, 36);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(976, 428);
+            this.dataGridView2.TabIndex = 21;
+            // 
+            // Name
+            // 
+            this.Namee.HeaderText = "Название";
+            this.Namee.Name = "Name";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "Номер заказа";
+            this.Number.Name = "Number";
+            // 
+            // Customer
+            // 
+            this.Customer.HeaderText = "Заказчик";
+            this.Customer.Name = "Customer";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Дата завершения";
+            this.Date.Name = "Date";
+            // 
+            // Cost
+            // 
+            this.Cost.HeaderText = "Итоговая стоимость";
+            this.Cost.Name = "Cost";
+            // 
             // CompletedTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CompletedTasks";
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.BottomPanel.ResumeLayout(false);
             this.BottomPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +205,11 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
     }
 }
