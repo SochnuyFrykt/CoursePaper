@@ -36,7 +36,7 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -139,7 +139,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.Namee,
             this.Number,
             this.Customer,
             this.Date,
@@ -151,8 +151,8 @@
             // 
             // Name
             // 
-            this.Name.HeaderText = "Название";
-            this.Name.Name = "Name";
+            this.Namee.HeaderText = "Название";
+            this.Namee.Name = "Name";
             // 
             // Number
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CompletedTasks";
+
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
