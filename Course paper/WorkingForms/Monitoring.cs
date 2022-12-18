@@ -16,11 +16,12 @@ namespace Course_paper
 		public Monitoring(Form form)
 		{
 			InitializeComponent();
-			ClassComand.SwitchColorButton(CloseButton);
-			ClassComand.SwitchColorButton(CollapsButton);
+			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
+			foreach (var button in buttons)
+				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-			ClassComand.ReturnWindow(label2, this, form);
+			ClassComand.ReturnWindow(buttonBack, this, form);
 		}
 
 		Point lastPoint;
