@@ -36,11 +36,11 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -149,31 +149,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(976, 428);
             this.dataGridView1.TabIndex = 19;
             // 
-            // fullName
+            // total
             // 
-            this.fullName.HeaderText = "ФИО Сотрудника";
-            this.fullName.Name = "fullName";
-            this.fullName.Width = 258;
-            // 
-            // Hours
-            // 
-            this.Hours.HeaderText = "Часы за месяц";
-            this.Hours.Name = "Hours";
-            // 
-            // Pay
-            // 
-            this.Pay.HeaderText = "Ставка";
-            this.Pay.Name = "Pay";
+            this.total.HeaderText = "Итог";
+            this.total.Name = "total";
             // 
             // Bonus
             // 
             this.Bonus.HeaderText = "Премия";
             this.Bonus.Name = "Bonus";
             // 
-            // total
+            // Pay
             // 
-            this.total.HeaderText = "Итог";
-            this.total.Name = "total";
+            this.Pay.HeaderText = "Ставка";
+            this.Pay.Name = "Pay";
+            // 
+            // Hours
+            // 
+            this.Hours.HeaderText = "Часы за месяц";
+            this.Hours.Name = "Hours";
+            // 
+            // fullName
+            // 
+            this.fullName.HeaderText = "ФИО Сотрудника";
+            this.fullName.Name = "fullName";
+            this.fullName.Width = 258;
             // 
             // SalaryCalculation
             // 
