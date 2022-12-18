@@ -11,17 +11,16 @@ using System.Windows.Forms;
 namespace Course_paper
 {
 
-    public partial class Monitoring : Form
-    {
-        Form formtoopen;
-        public Monitoring(Form form)
+	public partial class Monitoring : Form
+	{
+		public Monitoring(Form form)
 		{
 			InitializeComponent();
 			ClassComand.SwitchColorButton(CloseButton);
 			ClassComand.SwitchColorButton(CollapsButton);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-			formtoopen = form;
+			ClassComand.ReturnWindow(label2, this, form);
 		}
 
 		Point lastPoint;
@@ -43,11 +42,5 @@ namespace Course_paper
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            formtoopen.Show();
-            Hide();
-        }
-    }
+	}
 }

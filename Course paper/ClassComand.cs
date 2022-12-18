@@ -41,5 +41,14 @@ namespace Course_paper
 				help.Show();
 			};
 		}
+
+		public static void ReturnWindow(Label buttonBack, Form hideForm, Form showForm)
+		{
+			buttonBack.MouseClick += (s, n) =>
+			{
+				hideForm.Hide();
+				showForm.Show();
+			};
+		}
 	}
 }
