@@ -143,6 +143,7 @@
 			this.AcceptanceEmployee.TabIndex = 13;
 			this.AcceptanceEmployee.Text = "Принятие работника";
 			this.AcceptanceEmployee.UseVisualStyleBackColor = false;
+			this.AcceptanceEmployee.Click += new System.EventHandler(this.AcceptanceEmployee_Click);
 			// 
 			// DismissalEmployee
 			// 
@@ -172,6 +173,7 @@
 			this.ContractCustomer.TabIndex = 15;
 			this.ContractCustomer.Text = "Оформление контракта с заказчиком";
 			this.ContractCustomer.UseVisualStyleBackColor = false;
+			this.ContractCustomer.Click += new System.EventHandler(this.ContractCustomer_Click);
 			// 
 			// Docs
 			// 
