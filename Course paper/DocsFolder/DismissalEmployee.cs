@@ -12,7 +12,8 @@ namespace Course_paper.DocsFolder
 {
 	public partial class DismissalEmployee : Form
 	{
-		public DismissalEmployee()
+        Form formToOpen;
+        public DismissalEmployee(Docs form)
 		{
 			InitializeComponent();
 			var buttons = new Label[4] {CloseButton, CollapsButton, ButtonBack, helpButton};
@@ -20,7 +21,8 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-		}
+            formToOpen = form;
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -36,5 +38,11 @@ namespace Course_paper.DocsFolder
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
-	}
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            formToOpen.Show();
+            Hide();
+        }
+    }
 }

@@ -41,6 +41,7 @@
 			this.SNM = new System.Windows.Forms.TextBox();
 			this.Post = new System.Windows.Forms.TextBox();
 			this.DismissalDate = new System.Windows.Forms.TextBox();
+			this.InfoAboutObjectsButton = new System.Windows.Forms.Button();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -57,6 +58,8 @@
 			this.TopPanel.Name = "TopPanel";
 			this.TopPanel.Size = new System.Drawing.Size(500, 30);
 			this.TopPanel.TabIndex = 2;
+			this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+			this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
 			// 
 			// ButtonBack
 			// 
@@ -68,6 +71,7 @@
 			this.ButtonBack.Size = new System.Drawing.Size(25, 25);
 			this.ButtonBack.TabIndex = 7;
 			this.ButtonBack.Text = "<";
+			this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
 			// 
 			// label3
 			// 
@@ -171,7 +175,6 @@
 			this.SNM.Name = "SNM";
 			this.SNM.Size = new System.Drawing.Size(358, 20);
 			this.SNM.TabIndex = 7;
-			this.SNM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// Post
 			// 
@@ -181,7 +184,6 @@
 			this.Post.Name = "Post";
 			this.Post.Size = new System.Drawing.Size(358, 20);
 			this.Post.TabIndex = 8;
-			this.Post.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// DismissalDate
 			// 
@@ -191,7 +193,20 @@
 			this.DismissalDate.Name = "DismissalDate";
 			this.DismissalDate.Size = new System.Drawing.Size(358, 20);
 			this.DismissalDate.TabIndex = 9;
-			this.DismissalDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// InfoAboutObjectsButton
+			// 
+			this.InfoAboutObjectsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+			this.InfoAboutObjectsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.InfoAboutObjectsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.InfoAboutObjectsButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.InfoAboutObjectsButton.ForeColor = System.Drawing.Color.White;
+			this.InfoAboutObjectsButton.Location = new System.Drawing.Point(130, 218);
+			this.InfoAboutObjectsButton.Name = "InfoAboutObjectsButton";
+			this.InfoAboutObjectsButton.Size = new System.Drawing.Size(230, 26);
+			this.InfoAboutObjectsButton.TabIndex = 12;
+			this.InfoAboutObjectsButton.Text = "Сформировать документ";
+			this.InfoAboutObjectsButton.UseVisualStyleBackColor = false;
 			// 
 			// DismissalEmployee
 			// 
@@ -199,6 +214,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(500, 280);
+			this.Controls.Add(this.InfoAboutObjectsButton);
 			this.Controls.Add(this.DismissalDate);
 			this.Controls.Add(this.Post);
 			this.Controls.Add(this.SNM);
@@ -235,5 +251,6 @@
 		private System.Windows.Forms.TextBox SNM;
 		private System.Windows.Forms.TextBox Post;
 		private System.Windows.Forms.TextBox DismissalDate;
+        private System.Windows.Forms.Button InfoAboutObjectsButton;
 	}
 }

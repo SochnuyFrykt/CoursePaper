@@ -61,7 +61,7 @@ namespace Course_paper
 
     private void DismissalEmployee_Click(object sender, EventArgs e)
     {
-      var dismissalForm = new DismissalEmployee();
+      var dismissalForm = new DismissalEmployee(this);
       dismissalForm.Show();
       Hide();
     }
