@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Blueprints"));
         }
         public BluePrints(MainManuForm form)
         {
@@ -28,6 +30,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Blueprints"));
             formtoopen = form;
         }
 
