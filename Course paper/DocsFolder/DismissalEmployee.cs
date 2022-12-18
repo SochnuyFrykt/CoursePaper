@@ -39,11 +39,6 @@ namespace Course_paper.DocsFolder
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-        private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonBack_Click(object sender, EventArgs e)
         {
             formToOpen.Show();

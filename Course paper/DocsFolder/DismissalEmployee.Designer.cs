@@ -205,7 +205,6 @@
 			this.InfoAboutObjectsButton.TabIndex = 12;
 			this.InfoAboutObjectsButton.Text = "Сформировать документ";
 			this.InfoAboutObjectsButton.UseVisualStyleBackColor = false;
-			this.InfoAboutObjectsButton.Click += new System.EventHandler(this.InfoAboutObjectsButton_Click);
 			// 
 			// DismissalEmployee
 			// 
