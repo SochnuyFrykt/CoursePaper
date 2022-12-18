@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,30 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			formtoopen = form;
-		}
+            dataGridView1.Rows.Add("123", "123", "123");
+            FileStream fin = new FileStream("D://test.base", FileMode.Append);
+            using (StreamWriter streamwriter = new StreamWriter(fin))
+            {
+                //bool doNotWrite = false;
+
+                //for (int j = 0; j <= dataGridView1.Rows.Count; j++)
+                //    for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)
+                //        if (dataGridView1.Rows[j].Cells[i].Value == null)
+                //            doNotWrite = true;
+
+                //if (!doNotWrite)
+                //{
+                    for (int j = 0; j <= dataGridView1.Rows.Count-1; j++)
+                        for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)
+                            streamwriter.WriteLine(dataGridView1.Rows[j].Cells[i].Value);
+                    streamwriter.Write("");
+                    streamwriter.Close();
+                    MessageBox.Show("Файл успешно сохранен");
+                //}
+                //else
+                //    MessageBox.Show("Не все информация о рейсе введена");
+            }
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -48,6 +72,11 @@ namespace Course_paper
         {
             formtoopen.Show();
             Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
