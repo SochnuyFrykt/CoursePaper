@@ -56,6 +56,18 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocsFolder\AcceptanceEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocsFolder\AcceptanceEmployee.Designer.cs">
+      <DependentUpon>AcceptanceEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocsFolder\ContractCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocsFolder\ContractCustomer.Designer.cs">
+      <DependentUpon>ContractCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkingForms\BluePrints.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocsFolder\AcceptanceEmployee.resx">
+      <DependentUpon>AcceptanceEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocsFolder\ContractCustomer.resx">
+      <DependentUpon>ContractCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkingForms\BluePrints.resx">
       <DependentUpon>BluePrints.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +189,8 @@
     <EmbeddedResource Include="WorkingForms\SalaryCalculation.resx">
       <DependentUpon>SalaryCalculation.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DocsFolder\blank-prikaza-ob-uvolnenii-forma-t-8.doc" />
+    <None Include="DocsFolder\prikaz-o-prieme-na-rabotu-blank-t1.doc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

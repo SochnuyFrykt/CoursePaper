@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Course_paper.DocsFolder
 {
-	public partial class ContractDiller : Form
+	public partial class ContractCustomer : Form
 	{
-		public ContractDiller()
+		public ContractCustomer()
 		{
 			InitializeComponent();
 		}
