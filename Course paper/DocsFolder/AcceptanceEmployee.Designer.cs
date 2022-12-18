@@ -37,15 +37,15 @@
 			this.helpButton = new System.Windows.Forms.Label();
 			this.SNM = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.Post = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.DismissalDate = new System.Windows.Forms.TextBox();
+			this.AcceptanceDate = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.Salary = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.TrialPeriod = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.generateButton = new System.Windows.Forms.Button();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -154,14 +154,14 @@
 			this.label1.TabIndex = 8;
 			this.label1.Text = "ФИО";
 			// 
-			// textBox1
+			// Post
 			// 
-			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.textBox1.Location = new System.Drawing.Point(203, 120);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(358, 20);
-			this.textBox1.TabIndex = 11;
+			this.Post.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Post.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.Post.Location = new System.Drawing.Point(203, 120);
+			this.Post.Name = "Post";
+			this.Post.Size = new System.Drawing.Size(358, 20);
+			this.Post.TabIndex = 11;
 			// 
 			// label2
 			// 
@@ -174,14 +174,14 @@
 			this.label2.TabIndex = 10;
 			this.label2.Text = "Должность";
 			// 
-			// DismissalDate
+			// AcceptanceDate
 			// 
-			this.DismissalDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.DismissalDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.DismissalDate.Location = new System.Drawing.Point(203, 181);
-			this.DismissalDate.Name = "DismissalDate";
-			this.DismissalDate.Size = new System.Drawing.Size(358, 20);
-			this.DismissalDate.TabIndex = 13;
+			this.AcceptanceDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.AcceptanceDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.AcceptanceDate.Location = new System.Drawing.Point(203, 181);
+			this.AcceptanceDate.Name = "AcceptanceDate";
+			this.AcceptanceDate.Size = new System.Drawing.Size(358, 20);
+			this.AcceptanceDate.TabIndex = 13;
 			// 
 			// label4
 			// 
@@ -195,14 +195,14 @@
 			this.label4.Text = "Принять на работу\r\n(Дата)";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// textBox2
+			// Salary
 			// 
-			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.textBox2.Location = new System.Drawing.Point(203, 244);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(358, 20);
-			this.textBox2.TabIndex = 15;
+			this.Salary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Salary.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.Salary.Location = new System.Drawing.Point(203, 244);
+			this.Salary.Name = "Salary";
+			this.Salary.Size = new System.Drawing.Size(358, 20);
+			this.Salary.TabIndex = 15;
 			// 
 			// label5
 			// 
@@ -216,14 +216,14 @@
 			this.label5.Text = "Ставка";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// textBox3
+			// TrialPeriod
 			// 
-			this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.textBox3.Location = new System.Drawing.Point(203, 301);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(358, 20);
-			this.textBox3.TabIndex = 17;
+			this.TrialPeriod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.TrialPeriod.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.TrialPeriod.Location = new System.Drawing.Point(203, 301);
+			this.TrialPeriod.Name = "TrialPeriod";
+			this.TrialPeriod.Size = new System.Drawing.Size(358, 20);
+			this.TrialPeriod.TabIndex = 17;
 			// 
 			// label6
 			// 
@@ -237,19 +237,19 @@
 			this.label6.Text = "Истытательный срок\r\n(Дата)";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// button1
+			// generateButton
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(273, 337);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(230, 26);
-			this.button1.TabIndex = 13;
-			this.button1.Text = "Сформировать документ";
-			this.button1.UseVisualStyleBackColor = false;
+			this.generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+			this.generateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.generateButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.generateButton.ForeColor = System.Drawing.Color.White;
+			this.generateButton.Location = new System.Drawing.Point(273, 337);
+			this.generateButton.Name = "generateButton";
+			this.generateButton.Size = new System.Drawing.Size(230, 26);
+			this.generateButton.TabIndex = 13;
+			this.generateButton.Text = "Сформировать документ";
+			this.generateButton.UseVisualStyleBackColor = false;
 			// 
 			// AcceptanceEmployee
 			// 
@@ -257,14 +257,14 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(600, 408);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.textBox3);
+			this.Controls.Add(this.generateButton);
+			this.Controls.Add(this.TrialPeriod);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.Salary);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.DismissalDate);
+			this.Controls.Add(this.AcceptanceDate);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.Post);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.SNM);
 			this.Controls.Add(this.label1);
@@ -293,14 +293,14 @@
 		private System.Windows.Forms.Label helpButton;
 		private System.Windows.Forms.TextBox SNM;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox Post;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox DismissalDate;
+		private System.Windows.Forms.TextBox AcceptanceDate;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox Salary;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox TrialPeriod;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button generateButton;
 	}
 }
