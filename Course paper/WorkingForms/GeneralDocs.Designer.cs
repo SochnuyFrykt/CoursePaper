@@ -35,6 +35,7 @@
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.SuspendLayout();
@@ -110,7 +111,7 @@
             this.BottomPanel.Controls.Add(this.helpButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 420);
+            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
             this.BottomPanel.TabIndex = 2;
@@ -127,12 +128,21 @@
             this.helpButton.TabIndex = 0;
             this.helpButton.Text = "Помощь";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(12, 36);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(976, 428);
+            this.webBrowser1.TabIndex = 1;
+            // 
             // GeneralDocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -156,5 +166,6 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }

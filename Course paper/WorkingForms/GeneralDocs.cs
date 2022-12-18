@@ -20,6 +20,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            webBrowser1.Url = new Uri("D:\\Projects\\CoursePaper\\Course paper\\GeneralDocs");
         }
         public GeneralDocs(MainManuForm form)
         {
@@ -28,6 +29,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            webBrowser1.Url = new Uri("D:\\Projects\\CoursePaper\\Course paper\\GeneralDocs");
             formtoopen = form;
         }
 
@@ -55,6 +57,11 @@ namespace Course_paper
         {
             formtoopen.Show();
             Hide();
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 }
