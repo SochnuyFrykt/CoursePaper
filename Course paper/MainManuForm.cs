@@ -23,8 +23,9 @@ namespace Course_paper
         public MainManuForm()
 		{
 			InitializeComponent();
-			ClassComand.SwitchColorButton(CloseButton);
-			ClassComand.SwitchColorButton(CollapsButton);
+			var buttons = new Label[3] { CloseButton, CollapsButton, helpButton };
+			foreach (var button in buttons)
+				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
             info = new InformationAboutObjects(this);
