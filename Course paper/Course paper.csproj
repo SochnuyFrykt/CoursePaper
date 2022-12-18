@@ -104,7 +104,7 @@
     <Compile Include="WorkingForms\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkingForms\DBUtils.cs" />
+    <Compile Include="DBUtils.cs" />
     <Compile Include="ClassComand.cs" />
     <Compile Include="WorkingForms\InformationAboutObjects.cs">
       <SubType>Form</SubType>
