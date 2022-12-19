@@ -13,7 +13,7 @@ namespace Course_paper.DocsFolder
 	public partial class DismissalEmployee : Form
 	{
 		Form formToOpen;
-		public DismissalEmployee(Docs form)
+		public DismissalEmployee()
 		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
@@ -21,7 +21,6 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-			formToOpen = form;
 		}
 
 		Point lastPoint;

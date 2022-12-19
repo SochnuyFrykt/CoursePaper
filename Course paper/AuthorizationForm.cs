@@ -73,20 +73,19 @@ namespace Course_paper
 
 		public void UserRole()
 		{
-            string UserName = Login.Text; ;
+			string UserName = Login.Text;
+			string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
+			string sql = "SELECT Post FROM coursedb.users WHERE `login` = @un";
 
-            string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
-            string sql = "SELECT Post FROM coursedb.users WHERE `login` = @un";
+			MySqlConnection conn = new MySqlConnection(connStr);
+			conn.Open();
 
-            MySqlConnection conn = new MySqlConnection(connStr);
-            conn.Open();
+			MySqlParameter nameParam = new MySqlParameter("@un", UserName);
 
-            MySqlParameter nameParam = new MySqlParameter("@un", UserName);
+			MySqlCommand command = new MySqlCommand(sql, conn);
+			command.Parameters.Add(nameParam);
 
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            command.Parameters.Add(nameParam);
-
-            string Form_Role = command.ExecuteScalar().ToString();
+			string Form_Role = command.ExecuteScalar().ToString();
 
 			//         Switch(Form_Role)
 			//{
@@ -97,14 +96,12 @@ namespace Course_paper
 			{
 				case "Генеральный директор":
 					var mainManu = new MainManuForm();
-					mainManu.Show();
-					Hide();
+					mainManu.Show(); Hide();
 					break;
 				case "Инженер":
 					var generalDocs = new GeneralDocs();
-                    generalDocs.Show();
-					Hide();
-                    break;
+					generalDocs.Show(); Hide();
+					break;
 				case "Производитель работ":
 					var orders = new Orders();
 					orders.Show(); Hide();
@@ -122,7 +119,7 @@ namespace Course_paper
 					completedTasks.Show(); Hide();
 					break;
 			}
-            conn.Close();
-        }
+			conn.Close();
+		}
 	}
 }

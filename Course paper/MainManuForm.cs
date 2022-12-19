@@ -12,15 +12,7 @@ namespace Course_paper
 {
 	public partial class MainManuForm : Form
 	{
-        InformationAboutObjects info;
-        Monitoring monitoring;
-        SalaryCalculation salary;
-        Orders orders;
-        Docs docs;
-        CompletedTasks completedTasks;
-        GeneralDocs generalDocs;
-        BluePrints blueprints;
-        public MainManuForm()
+		public MainManuForm()
 		{
 			InitializeComponent();
 			var buttons = new Label[3] { CloseButton, CollapsButton, helpButton };
@@ -28,15 +20,24 @@ namespace Course_paper
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-            info = new InformationAboutObjects(this);
-            monitoring = new Monitoring(this);
-            salary = new SalaryCalculation(this);
-            orders = new Orders(this);
-            docs = new Docs(this);
-            completedTasks = new CompletedTasks(this);
-            generalDocs = new GeneralDocs(this);
-            blueprints = new BluePrints(this);
-        }
+			var info = new InformationAboutObjects(this);
+			var monitoring = new Monitoring(this);
+			var salary = new SalaryCalculation(this);
+			var orders = new Orders(this);
+			var docs = new Docs(this);
+			var completedTasks = new CompletedTasks(this);
+			var generalDocs = new GeneralDocs(this);
+			var blueprints = new BluePrints(this);
+			ClassComand.HideShowWindow(InfoAboutObjectsButton, this, info);
+			ClassComand.HideShowWindow(MonitoringButton, this, monitoring);
+			ClassComand.HideShowWindow(SalaryCalcButton, this, salary);
+			ClassComand.HideShowWindow(OrdersButton, this, orders);
+			ClassComand.HideShowWindow(DocumentGenerationButton, this, docs);
+			ClassComand.HideShowWindow(CompletedTasksButton, this, completedTasks);
+			ClassComand.HideShowWindow(GeneralDocsButton, this, generalDocs);
+			ClassComand.HideShowWindow(BlueprintsButton, this, blueprints);
+		}
+
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -46,6 +47,7 @@ namespace Course_paper
 				Top += e.Y - lastPoint.Y;
 			}
 		}
+
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
@@ -55,54 +57,5 @@ namespace Course_paper
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-        private void InfoAboutObjectsButton_Click(object sender, EventArgs e)
-        {
-            info.Show();
-            Hide();
-        }
-
-        private void MonitoringButton_Click(object sender, EventArgs e)
-        {
-            monitoring.Show();
-            Hide();
-        }
-
-        private void SalaryCalcButton_Click(object sender, EventArgs e)
-        {
-            salary.Show();
-            Hide();
-        }
-
-        private void OrdersButton_Click(object sender, EventArgs e)
-        {
-            orders.Show();
-            Hide();
-        }
-
-        private void DocumentGenerationButton_Click(object sender, EventArgs e)
-        {
-            docs.Show();
-            Hide();
-        }
-        private void CompletedTasksButton_Click(object sender, EventArgs e)
-        {
-            completedTasks.Show();
-            Hide();
-        }
-        private void BlueprintsButton_Click(object sender, EventArgs e)
-        {
-            blueprints.Show();
-            Hide();
-        }
-        private void GeneralDocsButton_Click(object sender, EventArgs e)
-        {
-            generalDocs.Show();
-            Hide();
-        }
-
-        private void MainManuForm_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }
