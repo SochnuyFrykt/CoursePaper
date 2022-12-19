@@ -17,18 +17,20 @@ namespace Course_paper
         public GeneralDocs()
         {
             InitializeComponent();
-            ClassComand.SwitchColorButton(CloseButton);
-            ClassComand.SwitchColorButton(CollapsButton);
-            ClassComand.Close(CloseButton);
+			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
+			foreach (var button in buttons)
+				ClassComand.SwitchColorButton(button);
+			ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "GeneralDocs"));
         }
         public GeneralDocs(MainManuForm form)
         {
             InitializeComponent();
-            ClassComand.SwitchColorButton(CloseButton);
-            ClassComand.SwitchColorButton(CollapsButton);
-            ClassComand.Close(CloseButton);
+			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
+			foreach (var button in buttons)
+				ClassComand.SwitchColorButton(button);
+			ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "GeneralDocs"));
             formtoopen = form;

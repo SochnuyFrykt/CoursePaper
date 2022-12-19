@@ -62,6 +62,8 @@
 			this.TopPanel.Name = "TopPanel";
 			this.TopPanel.Size = new System.Drawing.Size(600, 30);
 			this.TopPanel.TabIndex = 3;
+			this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+			this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
 			// 
 			// ButtonBack
 			// 
@@ -272,6 +274,7 @@
 			this.Controls.Add(this.TopPanel);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "AcceptanceEmployee";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AcceptanceEmployee";
 			this.TopPanel.ResumeLayout(false);
 			this.TopPanel.PerformLayout();

@@ -87,6 +87,8 @@
 			this.TopPanel.Name = "TopPanel";
 			this.TopPanel.Size = new System.Drawing.Size(650, 30);
 			this.TopPanel.TabIndex = 5;
+			this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+			this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
 			// 
 			// ButtonBack
 			// 
@@ -293,6 +295,7 @@
 			this.Controls.Add(this.BottomPanel);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "ContractCustomer";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ContractDiller";
 			this.BottomPanel.ResumeLayout(false);
 			this.BottomPanel.PerformLayout();

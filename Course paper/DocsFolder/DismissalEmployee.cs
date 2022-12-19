@@ -12,17 +12,16 @@ namespace Course_paper.DocsFolder
 {
 	public partial class DismissalEmployee : Form
 	{
-        Form formToOpen;
-        public DismissalEmployee(Docs form)
+		Form formToOpen;
+		public DismissalEmployee()
 		{
 			InitializeComponent();
-			var buttons = new Label[4] {CloseButton, CollapsButton, ButtonBack, helpButton};
+			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
 			foreach (var button in buttons)
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-            formToOpen = form;
-        }
+		}
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -39,10 +38,10 @@ namespace Course_paper.DocsFolder
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-        private void ButtonBack_Click(object sender, EventArgs e)
-        {
-            formToOpen.Show();
-            Hide();
-        }
-    }
+		private void ButtonBack_Click(object sender, EventArgs e)
+		{
+			formToOpen.Show();
+			Hide();
+		}
+	}
 }

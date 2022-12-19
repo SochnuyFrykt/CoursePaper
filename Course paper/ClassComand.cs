@@ -18,11 +18,12 @@ namespace Course_paper
 				button.ForeColor = Color.White;
 		}
 
-        public static void Close(Label button)
+		public static void Close(Label button)
 		{
 			button.MouseClick += (s, n) =>
 				Application.Exit();
 		}
+
 		public static void Hide(Label button)
 		{
 			button.MouseClick += (s, n) =>
@@ -30,11 +31,6 @@ namespace Course_paper
 				var help = new Help();
 				help.Hide();
 			};
-        }
-
-		public static void Collaps(FormWindowState WindowState)
-		{
-			WindowState = FormWindowState.Minimized;
 		}
 
 		public static void ShowHelp(Label button)
@@ -44,6 +40,24 @@ namespace Course_paper
 				var help = new Help();
 				help.Show();
 			};
-        }
+		}
+
+		public static void ReturnWindow(Label buttonBack, Form hideForm, Form showForm)
+		{
+			buttonBack.MouseClick += (s, n) =>
+			{
+				hideForm.Hide();
+				showForm.Show();
+			};
+		}
+
+		public static void HideShowWindow(Button buttonBack, Form hideForm, Form showForm)
+		{
+			buttonBack.MouseClick += (s, n) =>
+			{
+				showForm.Show();
+				hideForm.Hide();
+			};
+		}
 	}
 }
