@@ -12,7 +12,7 @@ namespace Course_paper_test
     public class StreamWriter1Test1
     {
         [TestMethod]
-        public void SaveTest2() 
+        public void SaveTest2() // Тест проверяет на правильность работы метода StreamWriter1.Save.
         {
             StreamWriter filePathArrange = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testprog.base"), false);
             StreamWriter filePathActual = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testTest.base"), false);
@@ -39,7 +39,7 @@ namespace Course_paper_test
             Assert.AreEqual(ComputeMD5Checksum("Tables\\testTest.base"), ComputeMD5Checksum("Tables\\testprog.base"));
         }
         [TestMethod]
-        public void LoadTest2()
+        public void LoadTest2() // Тест проверяет на правильность работы метода StreamWriter1.Load.
         {
             StreamWriter filePathArrange = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testprog1.base"), false);
             StreamWriter filePathMedium = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testMedium.base"), false);
@@ -67,7 +67,7 @@ namespace Course_paper_test
 
             Assert.AreEqual(ComputeMD5Checksum("Tables\\testTest1.base"), ComputeMD5Checksum("Tables\\testMedium.base"));
         }
-        private string ComputeMD5Checksum(string path)
+        private string ComputeMD5Checksum(string path) // Метод для вычисления хэш кода файла
         {
             using (FileStream fs = File.OpenRead(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path)))
             {
@@ -171,7 +171,7 @@ namespace Course_paper_test
             Assert.AreEqual(result, dgv.Rows[0].Cells[4].Value);
         }
         [TestMethod]
-        public void LineFullTest2()
+        public void LineFullTest2() // Тест проверяет на правильность работы метода SalaryCalculation.LineFull.
         {
             DataGridView dgv = new DataGridView();
             dgv.Columns.Add("1", "11");
@@ -193,7 +193,7 @@ namespace Course_paper_test
             Assert.AreEqual(SalaryCalculation.LineFull(1, dgv), false);
         }
         [TestMethod]
-        public void ItogTest2()
+        public void ItogTest2() // Тест проверяет на правильность работы метода SalaryCalculation.Itog.
         {
             DataGridView dgv = new DataGridView();
             int actual = 0;

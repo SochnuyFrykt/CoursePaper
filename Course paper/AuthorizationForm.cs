@@ -6,7 +6,6 @@ using MySql.Data.MySqlClient;
 
 namespace Course_paper
 {
-
 	public partial class AuthorizationForm : Form
 	{
 
@@ -20,7 +19,6 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 		}
-
 
 		//Два метода снизу позволяют двигать окно программы
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -107,7 +105,6 @@ namespace Course_paper
 					break;
 			}
 			conn.Close();
-
 		}
     }
 }

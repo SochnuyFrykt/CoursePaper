@@ -2,7 +2,6 @@
 
 namespace Course_paper
 {
-
 	internal class DBUtils
 	{
 

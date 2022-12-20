@@ -6,7 +6,6 @@ namespace StrWriter
 {
     public class StreamWriter1
     {
-
         public static void Load(DataGridView dataGridView1, string path) //Загрузка данных из файла в таблицу
         {
             string[] dataString = File.ReadAllLines(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path));//Массив всех строк из файла

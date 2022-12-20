@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper
@@ -37,8 +31,6 @@ namespace Course_paper
 			ClassComand.HideShowWindow(GeneralDocsButton, this, generalDocs);
 			ClassComand.HideShowWindow(BlueprintsButton, this, blueprints);
 		}
-
-
 
 		//Два следующих метода позволяют двигать окно
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
