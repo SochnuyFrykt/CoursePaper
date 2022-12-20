@@ -77,7 +77,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
 			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label3.Location = new System.Drawing.Point(443, 5);
+			this.label3.Location = new System.Drawing.Point(399, 5);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(202, 20);
 			this.label3.TabIndex = 5;

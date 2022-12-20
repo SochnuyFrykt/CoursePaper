@@ -28,171 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CollapsButton = new System.Windows.Forms.Label();
-            this.CloseButton = new System.Windows.Forms.Label();
-            this.BottomPanel = new System.Windows.Forms.Panel();
-            this.helpButton = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TopPanel.SuspendLayout();
-            this.BottomPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-            this.TopPanel.Controls.Add(this.label2);
-            this.TopPanel.Controls.Add(this.label3);
-            this.TopPanel.Controls.Add(this.CollapsButton);
-            this.TopPanel.Controls.Add(this.CloseButton);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1000, 30);
-            this.TopPanel.TabIndex = 1;
-            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
-            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "<";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(443, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Выполненные задачи";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.UseMnemonic = false;
-            // 
-            // CollapsButton
-            // 
-            this.CollapsButton.AutoSize = true;
-            this.CollapsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CollapsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CollapsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CollapsButton.Location = new System.Drawing.Point(955, 4);
-            this.CollapsButton.Name = "CollapsButton";
-            this.CollapsButton.Size = new System.Drawing.Size(17, 18);
-            this.CollapsButton.TabIndex = 1;
-            this.CollapsButton.Text = "_";
-            this.CollapsButton.Click += new System.EventHandler(this.CollapsButton_Click);
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.AutoSize = true;
-            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CloseButton.Location = new System.Drawing.Point(978, 6);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(19, 18);
-            this.CloseButton.TabIndex = 0;
-            this.CloseButton.Text = "X";
-            // 
-            // BottomPanel
-            // 
-            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-            this.BottomPanel.Controls.Add(this.helpButton);
-            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 470);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
-            this.BottomPanel.TabIndex = 2;
-            // 
-            // helpButton
-            // 
-            this.helpButton.AutoSize = true;
-            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.helpButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.helpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.helpButton.Location = new System.Drawing.Point(3, 3);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(72, 20);
-            this.helpButton.TabIndex = 0;
-            this.helpButton.Text = "Помощь";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Namee,
+			this.TopPanel = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.CollapsButton = new System.Windows.Forms.Label();
+			this.CloseButton = new System.Windows.Forms.Label();
+			this.BottomPanel = new System.Windows.Forms.Panel();
+			this.helpButton = new System.Windows.Forms.Label();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.TopPanel.SuspendLayout();
+			this.BottomPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// TopPanel
+			// 
+			this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
+			this.TopPanel.Controls.Add(this.label2);
+			this.TopPanel.Controls.Add(this.label3);
+			this.TopPanel.Controls.Add(this.CollapsButton);
+			this.TopPanel.Controls.Add(this.CloseButton);
+			this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.TopPanel.Location = new System.Drawing.Point(0, 0);
+			this.TopPanel.Name = "TopPanel";
+			this.TopPanel.Size = new System.Drawing.Size(1000, 30);
+			this.TopPanel.TabIndex = 1;
+			this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+			this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label2.Location = new System.Drawing.Point(3, 2);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(25, 25);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "<";
+			this.label2.Click += new System.EventHandler(this.label2_Click);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label3.Location = new System.Drawing.Point(416, 5);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(167, 20);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Выполненные задачи";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label3.UseMnemonic = false;
+			// 
+			// CollapsButton
+			// 
+			this.CollapsButton.AutoSize = true;
+			this.CollapsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.CollapsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CollapsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.CollapsButton.Location = new System.Drawing.Point(955, 4);
+			this.CollapsButton.Name = "CollapsButton";
+			this.CollapsButton.Size = new System.Drawing.Size(17, 18);
+			this.CollapsButton.TabIndex = 1;
+			this.CollapsButton.Text = "_";
+			this.CollapsButton.Click += new System.EventHandler(this.CollapsButton_Click);
+			// 
+			// CloseButton
+			// 
+			this.CloseButton.AutoSize = true;
+			this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CloseButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.CloseButton.Location = new System.Drawing.Point(978, 6);
+			this.CloseButton.Name = "CloseButton";
+			this.CloseButton.Size = new System.Drawing.Size(19, 18);
+			this.CloseButton.TabIndex = 0;
+			this.CloseButton.Text = "X";
+			// 
+			// BottomPanel
+			// 
+			this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
+			this.BottomPanel.Controls.Add(this.helpButton);
+			this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.BottomPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.BottomPanel.Location = new System.Drawing.Point(0, 470);
+			this.BottomPanel.Name = "BottomPanel";
+			this.BottomPanel.Size = new System.Drawing.Size(1000, 30);
+			this.BottomPanel.TabIndex = 2;
+			// 
+			// helpButton
+			// 
+			this.helpButton.AutoSize = true;
+			this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.helpButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.helpButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.helpButton.Location = new System.Drawing.Point(3, 3);
+			this.helpButton.Name = "helpButton";
+			this.helpButton.Size = new System.Drawing.Size(72, 20);
+			this.helpButton.TabIndex = 0;
+			this.helpButton.Text = "Помощь";
+			// 
+			// dataGridView2
+			// 
+			this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
             this.Number,
             this.Customer,
             this.Date,
             this.Cost});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 36);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(976, 428);
-            this.dataGridView2.TabIndex = 21;
-            // 
-            // Name
-            // 
-            this.Namee.HeaderText = "Название";
-            this.Namee.Name = "Name";
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "Номер заказа";
-            this.Number.Name = "Number";
-            // 
-            // Customer
-            // 
-            this.Customer.HeaderText = "Заказчик";
-            this.Customer.Name = "Customer";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата завершения";
-            this.Date.Name = "Date";
-            // 
-            // Cost
-            // 
-            this.Cost.HeaderText = "Итоговая стоимость";
-            this.Cost.Name = "Cost";
-            // 
-            // CompletedTasks
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.BottomPanel);
-            this.Controls.Add(this.TopPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompletedTasks";
-            this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
-            this.BottomPanel.ResumeLayout(false);
-            this.BottomPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ResumeLayout(false);
+			this.dataGridView2.Location = new System.Drawing.Point(12, 36);
+			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.Size = new System.Drawing.Size(976, 428);
+			this.dataGridView2.TabIndex = 21;
+			// 
+			// Name
+			// 
+			this.Name.HeaderText = "Название";
+			this.Name.Name = "Name";
+			// 
+			// Number
+			// 
+			this.Number.HeaderText = "Номер заказа";
+			this.Number.Name = "Number";
+			// 
+			// Customer
+			// 
+			this.Customer.HeaderText = "Заказчик";
+			this.Customer.Name = "Customer";
+			// 
+			// Date
+			// 
+			this.Date.HeaderText = "Дата завершения";
+			this.Date.Name = "Date";
+			// 
+			// Cost
+			// 
+			this.Cost.HeaderText = "Итоговая стоимость";
+			this.Cost.Name = "Cost";
+			// 
+			// CompletedTasks
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+			this.ClientSize = new System.Drawing.Size(1000, 500);
+			this.Controls.Add(this.dataGridView2);
+			this.Controls.Add(this.BottomPanel);
+			this.Controls.Add(this.TopPanel);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "CompletedTasks";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "CompletedTasks";
+			this.TopPanel.ResumeLayout(false);
+			this.TopPanel.PerformLayout();
+			this.BottomPanel.ResumeLayout(false);
+			this.BottomPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.ResumeLayout(false);
 
         }
 
@@ -211,5 +211,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
     }
 }
