@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StrWriter
 {
     public class StreamWriter1
     {
+
         public static void Load(DataGridView dataGridView1, string path) //Загрузка данных из файла в таблицу
         {
             string[] dataString = File.ReadAllLines(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path));//Массив всех строк из файла
@@ -24,9 +21,11 @@ namespace StrWriter
                     }
                 }
         }
+
         public static void Save(DataGridView dataGridView1, string path) //Сохраняет данные из таблицы в файл
         {
-            StreamWriter streamwriter = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path), false);//Создает файл либо перезаписывает текущий
+            //Создает файл либо перезаписывает текущий
+            StreamWriter streamwriter = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path), false);
             for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
             {
                 for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)

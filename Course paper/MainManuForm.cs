@@ -38,7 +38,8 @@ namespace Course_paper
 			ClassComand.HideShowWindow(BlueprintsButton, this, blueprints);
 		}
 
-		Point lastPoint;
+
+
 		//Два следующих метода позволяют двигать окно
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -49,7 +50,9 @@ namespace Course_paper
 			}
 		}
 
-		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        Point lastPoint;
+
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}

@@ -201,7 +201,6 @@
             this.Login.TabIndex = 1;
             this.Login.Text = "admin";
             this.Login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
             // label5
             // 

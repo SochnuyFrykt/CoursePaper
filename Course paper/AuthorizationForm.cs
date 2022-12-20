@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Course_paper
 {
+
 	public partial class AuthorizationForm : Form
 	{
-		public AuthorizationForm()
+
+        Point lastPoint;
+        public AuthorizationForm()
 		{
 			InitializeComponent();
 			var buttons = new Label[3] { CloseButton, CollapsButton, helpButton };
@@ -24,7 +21,7 @@ namespace Course_paper
 			ClassComand.ShowHelp(helpButton);
 		}
 
-		Point lastPoint;
+
 		//Два метода снизу позволяют двигать окно программы
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
@@ -39,11 +36,13 @@ namespace Course_paper
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
+
 		//Позволяет скрыть окно программы
 		private void CollapsButton_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Minimized;
 		}
+
 		//Действие при нажатии кнопки авторизации
 		private void LoginButton_Click(object sender, EventArgs e) //Подключается к базе данных, проверяет правильность пароля и логина
 		{
@@ -57,10 +56,8 @@ namespace Course_paper
 				databaseUtils.GetConnection());
 			mySqlCommand.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
 			mySqlCommand.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passwordUser;
-
 			mySqlDataAdapter.SelectCommand = mySqlCommand;
 			mySqlDataAdapter.Fill(dataTable);
-
 			if (dataTable.Rows.Count > 0)
 			{
 				var temp = Login.Text;
@@ -69,6 +66,7 @@ namespace Course_paper
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
 		}
+
 		//Подключается к базе данных и смотрит роль пользователя
 		public void UserRole(string temp) 
 		{
@@ -109,11 +107,7 @@ namespace Course_paper
 					break;
 			}
 			conn.Close();
+
 		}
-
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
