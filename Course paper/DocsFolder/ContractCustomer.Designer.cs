@@ -100,6 +100,7 @@
 			this.ButtonBack.Size = new System.Drawing.Size(25, 25);
 			this.ButtonBack.TabIndex = 7;
 			this.ButtonBack.Text = "<";
+			this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
 			// 
 			// label3
 			// 

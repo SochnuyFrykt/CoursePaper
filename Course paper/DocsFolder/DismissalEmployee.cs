@@ -21,6 +21,7 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
+			formToOpen = new Docs(new MainManuForm());
 		}
 
 		Point lastPoint;

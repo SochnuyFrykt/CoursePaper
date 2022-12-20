@@ -33,9 +33,6 @@ namespace Course_paper
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-			var dismissalForm = new DismissalEmployee();
-			var acceptanceEmplaoyee = new AcceptanceEmployee();
-			var contractCustomer = new ContractCustomer();
 		}
 
 		Point lastPoint;

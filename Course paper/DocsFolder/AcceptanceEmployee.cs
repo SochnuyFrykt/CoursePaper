@@ -12,6 +12,7 @@ namespace Course_paper.DocsFolder
 {
 	public partial class AcceptanceEmployee : Form
 	{
+		Form formToOpen;
 		public AcceptanceEmployee()
 		{
 			InitializeComponent();
@@ -20,6 +21,7 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.ShowHelp(helpButton);
 			ClassComand.Close(CloseButton);
+			formToOpen = new Docs(new MainManuForm());
 		}
 
 		Point lastPoint;
@@ -35,6 +37,12 @@ namespace Course_paper.DocsFolder
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
+		}
+
+		private void ButtonBack_Click(object sender, EventArgs e)
+		{
+			formToOpen.Show();
+			Hide();
 		}
 	}
 }
