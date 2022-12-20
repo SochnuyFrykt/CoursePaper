@@ -57,6 +57,29 @@ namespace Course_paper
         private void Send_Click(object sender, EventArgs e)
         {
 			StreamWriter1.Save(dataGridView1, "Tables\\test.base");
+
+        }
+		public void Itog()
+		{
+			for (int i = 0; i < dataGridView1.RowCount; i++)
+			{
+					if (LineFull(i, dataGridView1))
+					{
+						dataGridView1.Rows[i].Cells[4].Value = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) + int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()) * int.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
+					}
+			}
+		}
+		public static bool LineFull(int i,DataGridView dgv)
+		{
+			for (int j = 0; j < dgv.ColumnCount-1; j++)
+				if (dgv.Rows[i].Cells[j].Value == "" || dgv.Rows[i].Cells[j].Value == null)
+					return false;
+			return true;
+		}
+
+        private void totalButton_Click(object sender, EventArgs e)
+        {
+            Itog();
         }
     }
 }

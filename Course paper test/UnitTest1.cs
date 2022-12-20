@@ -3,75 +3,86 @@ using StrWriter;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using Course_paper;
 
 namespace Course_paper_test
 {
     [TestClass]
-    public class UnitTest1
+    public class StreamWriter1Test1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SaveTest1()
         {
             DataGridView dgv = new DataGridView();
-            string path = "Tables\\testprog.base";
+            string path = @"D:\test - Copy - Copy.base";
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
             for (int i = 0; i < 5; i++)
+            {
+                dgv.Rows.Add();
                 for (int j = 0; j < 5; j++)
                     dgv.Rows[i].Cells[j].Value = i + j + 1;
-
+            }
             StreamWriter1.Save(dgv, path);
-
-            //Assert.AreEqual(FileCompare());
+            string a1 = @"D:\test.base";
+            using (StreamReader sr1 = new StreamReader(a1))
+            using (StreamReader sr2 = new StreamReader(path))
+            {
+                a1 = sr1.ReadToEnd();
+                path = sr2.ReadToEnd();
+            }
+            Assert.AreEqual(a1, path);
         }
-        private bool FileCompare(string file1, string file2)
+        [TestMethod]
+        public void LoadTest2()
         {
-            int file1byte;
-            int file2byte;
-            FileStream fs1;
-            FileStream fs2;
-
-            // Determine if the same file was referenced two times.
-            if (file1 == file2)
-            {
-                // Return true to indicate that the files are the same.
-                return true;
-            }
-
-            // Open the two files.
-            fs1 = new FileStream(file1, FileMode.Open);
-            fs2 = new FileStream(file2, FileMode.Open);
-
-            // Check the file sizes. If they are not the same, the files
-            // are not the same.
-            if (fs1.Length != fs2.Length)
-            {
-                // Close the file
-                fs1.Close();
-                fs2.Close();
-
-                // Return false to indicate files are different
-                return false;
-            }
-
-            // Read and compare a byte from each file until either a
-            // non-matching set of bytes is found or until the end of
-            // file1 is reached.
-            do
-            {
-                // Read one byte from each file.
-                file1byte = fs1.ReadByte();
-                file2byte = fs2.ReadByte();
-            }
-            while ((file1byte == file2byte) && (file1byte != -1));
-
-            // Close the files.
-            fs1.Close();
-            fs2.Close();
-
-            // Return the success of the comparison. "file1byte" is
-            // equal to "file2byte" at this point only if the files are
-            // the same.
-            return ((file1byte - file2byte) == 0);
+            string path = @"D:\temp.base";
+            string str1 = "", str2 = "";
+            StreamWriter streamwriter = new StreamWriter(path, false);
+            for (int j = 0; j < 5; j++)
+                for (int i = 0; i < 5; i++)
+                {
+                    streamwriter.WriteLine(i + j + 1);
+                    str2 += i + j + 1;
+                }
+            streamwriter.Close();
+            DataGridView dgv = new DataGridView();
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
+            StreamWriter1.Load(dgv, path);
+            streamwriter.Close();
+            for (int j = 0; j < dgv.Rows.Count - 1; j++)
+                for (int i = 0; i < dgv.Rows[j].Cells.Count; i++)
+                    str1 += dgv.Rows[j].Cells[i].Value;
+            Assert.AreEqual(str1, str2);
         }
+        [TestMethod]
+        public void LineFullTest()
+        {
+            DataGridView dgv = new DataGridView();
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
+            Assert.IsFalse(SalaryCalculation.LineFull(0, dgv));
+            dgv.Rows.Add();
+            for (int i = 0; i < 4; i++)
+            {
+                dgv.Rows[0].Cells[i].Value = i;
+            }
+            Assert.IsTrue(SalaryCalculation.LineFull(0, dgv));
+        }
+        [TestMethod]
+        public void ItogTest()
+        {
 
+        }
     }
 }
