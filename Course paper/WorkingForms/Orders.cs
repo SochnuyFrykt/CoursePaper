@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Mail;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Principal;
 
 namespace Course_paper
 {
@@ -58,14 +61,29 @@ namespace Course_paper
 			Hide();
 		}
 
-		private void richTextBox1_TextChanged(object sender, EventArgs e)
+		private void SendButton_Click(object sender, EventArgs e)
 		{
+			if (richTextBox1.Text != "")
+			{
+				MailAddress fromAddress = new MailAddress("limon12345ivanoff@ya.ru", "Данил");
+				MailAddress toAdress = new MailAddress("kuzkokuzkovi4@gmail.com");
+				MailMessage mailMessage = new MailMessage(fromAddress, toAdress);
 
-		}
+				mailMessage.Subject = "Заказ товара";
+				mailMessage.Body = richTextBox1.Text;
 
-		private void MonitoringButton_Click(object sender, EventArgs e)
-		{
-
+				SmtpClient smtpClient = new SmtpClient();
+				smtpClient.Host = "smtp.gmail.com";
+				smtpClient.Port = 587;
+				smtpClient.EnableSsl = true;
+				smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+				smtpClient.UseDefaultCredentials = false;
+				smtpClient.Credentials = new NetworkCredential(fromAddress.Address, "Ss2-n9h-eii-3VS");
+				
+				smtpClient.Send(mailMessage);
+			}
+			else
+				throw new ArgumentException("Вы пытаетесь отправить пустое письмо. Так делать плохо!");
 		}
 	}
 }
