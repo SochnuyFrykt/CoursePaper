@@ -75,7 +75,7 @@ namespace Course_paper
 			{
 					if (LineFull(i, dataGridView1))
 					{
-						dataGridView1.Rows[i].Cells[4].Value = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) + int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()) * int.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
+						dataGridView1.Rows[i].Cells[4].Value = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()) + int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()) + int.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
 					}
 			}
 		}

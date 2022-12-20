@@ -171,5 +171,45 @@ namespace Course_paper_test
             int result = int.Parse(dgv.Rows[0].Cells[3].Value.ToString()) + int.Parse(dgv.Rows[0].Cells[2].Value.ToString()) * int.Parse(dgv.Rows[0].Cells[1].Value.ToString());
             Assert.AreEqual(result, dgv.Rows[0].Cells[4].Value);
         }
+        [TestMethod]
+        public void LineFullTest2()
+        {
+            DataGridView dgv = new DataGridView();
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
+            dgv.Rows.Add();
+            for (int i = 0; i < 4; i++)
+            {
+                dgv.Rows[0].Cells[i].Value = i;
+            }
+            Assert.AreEqual(SalaryCalculation.LineFull(0, dgv), true);
+            dgv.Rows.Add();
+            for (int i = 0; i < 3; i++)
+            {
+                dgv.Rows[1].Cells[i].Value = i * 3;
+            }
+            Assert.AreEqual(SalaryCalculation.LineFull(1, dgv), false);
+        }
+        [TestMethod]
+        public void ItogTest2()
+        {
+            DataGridView dgv = new DataGridView();
+            int actual = 0;
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
+            for (int i = 0; i < 4; i++)
+            {
+                dgv.Rows[0].Cells[i].Value = i * 10 + 30;
+                actual += i * 10 + 30;
+            }
+            SalaryCalculation.Itog(dgv);
+            Assert.AreEqual(actual, dgv.Rows[0].Cells[4].Value);
+        }
     }
 }
