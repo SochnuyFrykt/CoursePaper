@@ -191,10 +191,10 @@
     <EmbeddedResource Include="WorkingForms\SalaryCalculation.resx">
       <DependentUpon>SalaryCalculation.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DocsFolder\DocsTemplate\blank-prikaza-ob-uvolnenii-forma-t-8.doc">
+    <None Include="DocsFolder\DocsTemplate\Приказ об увольнении.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="DocsFolder\DocsTemplate\prikaz-o-prieme-na-rabotu-blank-t1.doc">
+    <None Include="DocsFolder\DocsTemplate\Приказ о приёме на работу.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">

@@ -21,7 +21,7 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.ShowHelp(helpButton);
 			ClassComand.Close(CloseButton);
-			string path = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\prikaz-o-prieme-na-rabotu-blank-t1.doc";
+			string path = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Приказ о приёме на работу.doc.doc";
 			var items = new Dictionary<string, string>
 			{
 				{ "<SNM>", SNM.Text },

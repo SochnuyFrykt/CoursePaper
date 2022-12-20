@@ -61,8 +61,9 @@ namespace Course_paper.DocsFolder
 						ReplaceWith: missing,
 						Replace: replace);
 				}
-
-				Object newFileName = Path.Combine(@"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents", DateTime.Now.ToString("yyyyMMdd HHmmss") + fileInfo.Name);
+				var newFilePath = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents";
+				var fileName = DateTime.Now.ToString("yyyy MM dd HH:mm:ss") + fileInfo.Name;
+				Object newFileName = Path.Combine(newFilePath, fileName);
 				app.ActiveDocument.SaveAs2(newFileName);
 				app.ActiveDocument.Close();
 				app.Quit();
