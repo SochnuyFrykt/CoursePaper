@@ -44,5 +44,21 @@ namespace Course_paper.DocsFolder
 			formToOpen.Show();
 			Hide();
 		}
+
+		private void generateButton_Click(object sender, EventArgs e)
+		{
+			var generate = new GenerateFileAcceptanceEmployee("prikaz-o-prieme-na-rabotu-blank-t1.doc");
+
+			var items = new Dictionary<string, string>
+			{
+				{ "SNM", SNM.Text },
+				{ "Post", Post.Text },
+				{ "AD", acceptanceDate.Value.ToString("dd.MM.yyyy") },
+				{ "Salary", Salary.Text },
+				{ "TP", TrialPeriod.Text },
+			};
+
+			generate.Process(items);
+		}
 	}
 }
