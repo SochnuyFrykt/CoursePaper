@@ -56,7 +56,7 @@ namespace Course_paper
             WindowState = FormWindowState.Minimized;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             formtoopen.Show();
             Hide();

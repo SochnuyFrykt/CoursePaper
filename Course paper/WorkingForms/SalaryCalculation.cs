@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,9 @@ namespace Course_paper
 	public partial class SalaryCalculation : Form
 	{
 		Form formtoopen;
-		public SalaryCalculation(MainManuForm form)
+		double length = 0;
+
+        public SalaryCalculation(MainManuForm form)
 		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
@@ -22,7 +25,18 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			formtoopen = form;
-		}
+            string[] dataString = File.ReadAllLines(@"D:\test.base");
+			for (int i = 0; i < dataString.Length;)
+                for (int k = 0; k < dataString.Length / 5; k++)
+                {
+                    dataGridView1.Rows.Add();
+                    for (int j = 0; j < 5; j++)
+                    {
+                        dataGridView1.Rows[k].Cells[j].Value = dataString[i];
+                        i++;
+                    }
+                }
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -49,5 +63,19 @@ namespace Course_paper
 			formtoopen.Show();
 			Hide();
 		}
-	}
+
+        private void MonitoringButton_Click(object sender, EventArgs e)
+        {
+            StreamWriter streamwriter = new StreamWriter("D://test.base", false);
+            for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
+            {
+                for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)
+                {
+                    streamwriter.WriteLine(dataGridView1.Rows[j].Cells[i].Value);
+                }
+            }
+            streamwriter.Close();
+            MessageBox.Show("Файл успешно сохранен");
+        }
+    }
 }
