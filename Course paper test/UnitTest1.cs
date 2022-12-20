@@ -5,6 +5,8 @@ using System.IO;
 using System.Windows.Forms;
 using Course_paper;
 using System.Security.Cryptography;
+using Course_paper.DocsFolder;
+using System.Collections.Generic;
 
 namespace Course_paper_test
 {
@@ -220,4 +222,38 @@ namespace Course_paper_test
             Assert.AreNotEqual(actual, dgv.Rows[1].Cells[4].Value);
         }
     }
+	[TestClass]
+	public class TestDanil
+	{
+		[TestMethod]
+		public void TestOnNull()
+		{
+			var dbUtils = new DBUtils();
+			Assert.IsNotNull(dbUtils.GetConnection());
+		}
+
+		[TestMethod]
+		public void Test2()
+		{
+			var auth = new AuthorizationForm();
+			Assert.IsNotNull(auth.Login);
+			Assert.IsNotNull(auth.Password);
+		}
+
+		[TestMethod]
+		public void Test3()
+		{
+			var gf = new GenerateFile();
+			var dict = new Dictionary<string, string>();
+			Assert.IsFalse(gf.Process(dict));
+		}
+
+		[TestMethod]
+		public void Test4()
+		{
+			var gf = new GenerateFile();
+			Assert.AreEqual(gf.CreateNewFile(gf.fileInfo.Name, DateTime.Now.ToString("yyyy MM dd HH:mm:ss"))
+				, gf.fileInfo.Name + DateTime.Now.ToString("yyyy MM dd HH:mm:ss"));
+		}
+	}
 }

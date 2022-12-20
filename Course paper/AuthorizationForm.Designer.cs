@@ -254,9 +254,9 @@
 		private System.Windows.Forms.Button LoginButton;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox Password;
+		public System.Windows.Forms.TextBox Password;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox Login;
+		public System.Windows.Forms.TextBox Login;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label5;
 	}
