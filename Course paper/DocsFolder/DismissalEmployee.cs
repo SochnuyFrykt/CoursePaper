@@ -21,6 +21,16 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
+			string path = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\blank-prikaza-ob-uvolnenii-forma-t-8.doc";
+			var items = new Dictionary<string, string>
+			{
+				{ "<SNM>", SNM.Text },
+				{ "<Post>", Post.Text },
+				{ "dd", DismissalDate.Value.ToString("dd") },
+				{ "MM", DismissalDate.Value.ToString("MM") },
+				{ "yy", DismissalDate.Value.ToString("yy") },
+			};
+			GenerateFile.Generate(GenerateButton, path, items);
 			formToOpen = new Docs(new MainManuForm());
 		}
 

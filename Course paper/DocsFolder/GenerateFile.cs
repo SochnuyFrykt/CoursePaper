@@ -9,11 +9,20 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Course_paper.DocsFolder
 {
-	internal class GenerateFileAcceptanceEmployee
+	internal class GenerateFile
 	{
 		private FileInfo fileInfo;
 
-		public GenerateFileAcceptanceEmployee(string fileName)
+		public static void Generate(Button generateButton, string path, Dictionary<string, string> dictionary)
+		{
+			generateButton.Click += (s, n) =>
+			{
+				var generate = new GenerateFile(path);
+				generate.Process(dictionary);
+			};
+		}
+
+		public GenerateFile(string fileName)
 		{
 			if (File.Exists(fileName))
 			{
@@ -52,7 +61,8 @@ namespace Course_paper.DocsFolder
 						ReplaceWith: missing,
 						Replace: replace);
 				}
-				Object newFileName = Path.Combine(fileInfo.DirectoryName, DateTime.Now.ToString("yyyyMMdd HHmmss") + fileInfo.Name);
+
+				Object newFileName = Path.Combine(@"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents", DateTime.Now.ToString("yyyyMMdd HHmmss") + fileInfo.Name);
 				app.ActiveDocument.SaveAs2(newFileName);
 				app.ActiveDocument.Close();
 				app.Quit();

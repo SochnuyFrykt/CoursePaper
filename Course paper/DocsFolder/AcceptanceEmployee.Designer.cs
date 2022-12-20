@@ -44,7 +44,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.TrialPeriod = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.generateButton = new System.Windows.Forms.Button();
+			this.GenerateButton = new System.Windows.Forms.Button();
 			this.acceptanceDate = new System.Windows.Forms.DateTimePicker();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
@@ -231,20 +231,19 @@
 			this.label6.Text = "Истытательный срок\r\n";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// generateButton
+			// GenerateButton
 			// 
-			this.generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-			this.generateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.generateButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-			this.generateButton.ForeColor = System.Drawing.Color.White;
-			this.generateButton.Location = new System.Drawing.Point(265, 337);
-			this.generateButton.Name = "generateButton";
-			this.generateButton.Size = new System.Drawing.Size(230, 26);
-			this.generateButton.TabIndex = 13;
-			this.generateButton.Text = "Сформировать документ";
-			this.generateButton.UseVisualStyleBackColor = false;
-			this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
+			this.GenerateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+			this.GenerateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.GenerateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.GenerateButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.GenerateButton.ForeColor = System.Drawing.Color.White;
+			this.GenerateButton.Location = new System.Drawing.Point(265, 337);
+			this.GenerateButton.Name = "GenerateButton";
+			this.GenerateButton.Size = new System.Drawing.Size(230, 26);
+			this.GenerateButton.TabIndex = 13;
+			this.GenerateButton.Text = "Сформировать документ";
+			this.GenerateButton.UseVisualStyleBackColor = false;
 			// 
 			// acceptanceDate
 			// 
@@ -260,7 +259,7 @@
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(600, 408);
 			this.Controls.Add(this.acceptanceDate);
-			this.Controls.Add(this.generateButton);
+			this.Controls.Add(this.GenerateButton);
 			this.Controls.Add(this.TrialPeriod);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.Salary);
@@ -303,7 +302,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox TrialPeriod;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button generateButton;
+		private System.Windows.Forms.Button GenerateButton;
 		private System.Windows.Forms.DateTimePicker acceptanceDate;
 	}
 }

@@ -68,7 +68,7 @@
     <Compile Include="DocsFolder\ContractCustomer.Designer.cs">
       <DependentUpon>ContractCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="DocsFolder\GenerateFileAcceptanceEmployee.cs" />
+    <Compile Include="DocsFolder\GenerateFile.cs" />
     <Compile Include="StreamWriter.cs" />
     <Compile Include="WorkingForms\BluePrints.cs">
       <SubType>Form</SubType>
@@ -191,10 +191,10 @@
     <EmbeddedResource Include="WorkingForms\SalaryCalculation.resx">
       <DependentUpon>SalaryCalculation.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DocsFolder\blank-prikaza-ob-uvolnenii-forma-t-8.doc">
+    <None Include="DocsFolder\DocsTemplate\blank-prikaza-ob-uvolnenii-forma-t-8.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="DocsFolder\prikaz-o-prieme-na-rabotu-blank-t1.doc">
+    <None Include="DocsFolder\DocsTemplate\prikaz-o-prieme-na-rabotu-blank-t1.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
@@ -238,6 +238,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DocsFolder\DocsTemplate\Generated Documents\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
