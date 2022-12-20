@@ -168,7 +168,7 @@ namespace Course_paper_test
             for (int i = 0; i < 4; i++)
                 dgv.Rows[0].Cells[i].Value = i * 20 + 50;
             SalaryCalculation.Itog(dgv);
-            int result = int.Parse(dgv.Rows[0].Cells[3].Value.ToString()) + int.Parse(dgv.Rows[0].Cells[2].Value.ToString()) * int.Parse(dgv.Rows[0].Cells[1].Value.ToString());
+            int result = int.Parse(dgv.Rows[0].Cells[3].Value.ToString()) + int.Parse(dgv.Rows[0].Cells[2].Value.ToString()) + int.Parse(dgv.Rows[0].Cells[1].Value.ToString());
             Assert.AreEqual(result, dgv.Rows[0].Cells[4].Value);
         }
         [TestMethod]
@@ -206,10 +206,19 @@ namespace Course_paper_test
             for (int i = 0; i < 4; i++)
             {
                 dgv.Rows[0].Cells[i].Value = i * 10 + 30;
-                actual += i * 10 + 30;
+                if (i > 0)
+                    actual += i * 10 + 30;
             }
             SalaryCalculation.Itog(dgv);
             Assert.AreEqual(actual, dgv.Rows[0].Cells[4].Value);
+            dgv.Rows.Add();
+            for (int i = 1; i < 4; i++)
+            {
+                dgv.Rows[1].Cells[i].Value = i * 10 + 30;
+                if (i > 0)
+                    actual += i * 10 + 30;
+            }
+            Assert.AreNotEqual(actual, dgv.Rows[1].Cells[4].Value);
         }
     }
 }
