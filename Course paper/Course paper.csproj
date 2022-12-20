@@ -68,6 +68,7 @@
     <Compile Include="DocsFolder\ContractCustomer.Designer.cs">
       <DependentUpon>ContractCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="StreamWriter.cs" />
     <Compile Include="WorkingForms\BluePrints.cs">
       <SubType>Form</SubType>
     </Compile>

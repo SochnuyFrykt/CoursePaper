@@ -41,7 +41,7 @@
             this.Pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MonitoringButton = new System.Windows.Forms.Button();
+            this.Send = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -176,20 +176,20 @@
             this.total.HeaderText = "Итог";
             this.total.Name = "total";
             // 
-            // MonitoringButton
+            // Send
             // 
-            this.MonitoringButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.MonitoringButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MonitoringButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MonitoringButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.MonitoringButton.ForeColor = System.Drawing.Color.White;
-            this.MonitoringButton.Location = new System.Drawing.Point(774, 352);
-            this.MonitoringButton.Name = "MonitoringButton";
-            this.MonitoringButton.Size = new System.Drawing.Size(165, 88);
-            this.MonitoringButton.TabIndex = 20;
-            this.MonitoringButton.Text = "Мониторинг деятельности";
-            this.MonitoringButton.UseVisualStyleBackColor = false;
-            this.MonitoringButton.Click += new System.EventHandler(this.MonitoringButton_Click);
+            this.Send.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.Send.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Send.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.Send.ForeColor = System.Drawing.Color.White;
+            this.Send.Location = new System.Drawing.Point(846, 399);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(131, 54);
+            this.Send.TabIndex = 20;
+            this.Send.Text = "Сохранить изменения";
+            this.Send.UseVisualStyleBackColor = false;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
             // 
             // SalaryCalculation
             // 
@@ -197,7 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.MonitoringButton);
+            this.Controls.Add(this.Send);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
@@ -229,6 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.Button MonitoringButton;
+        private System.Windows.Forms.Button Send;
     }
 }

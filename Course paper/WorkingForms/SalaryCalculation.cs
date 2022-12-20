@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StrWriter;
 
 namespace Course_paper
 {
 	public partial class SalaryCalculation : Form
 	{
 		Form formtoopen;
-		double length = 0;
 
         public SalaryCalculation(MainManuForm form)
 		{
@@ -25,17 +25,7 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			formtoopen = form;
-            string[] dataString = File.ReadAllLines(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\test.base"));
-			for (int i = 0; i < dataString.Length;)
-                for (int k = 0; k < dataString.Length / 5; k++)
-                {
-                    dataGridView1.Rows.Add();
-                    for (int j = 0; j < 5; j++)
-                    {
-                        dataGridView1.Rows[k].Cells[j].Value = dataString[i];
-                        i++;
-                    }
-                }
+			StreamWriter1.Load(dataGridView1, "Tables\\test.base");
         }
 
 		Point lastPoint;
@@ -64,18 +54,9 @@ namespace Course_paper
 			Hide();
 		}
 
-        private void MonitoringButton_Click(object sender, EventArgs e)
+        private void Send_Click(object sender, EventArgs e)
         {
-            StreamWriter streamwriter = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\test.base"), false);
-            for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
-            {
-                for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)
-                {
-                    streamwriter.WriteLine(dataGridView1.Rows[j].Cells[i].Value);
-                }
-            }
-            streamwriter.Close();
-            MessageBox.Show("Файл успешно сохранен");
+			StreamWriter1.Save(dataGridView1, "Tables\\test.base");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrWriter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
+            StreamWriter1.Load(dataGridView2, "Tables\\test2.base");
         }
         public CompletedTasks(MainManuForm form)
         {
@@ -29,6 +31,7 @@ namespace Course_paper
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             formtoopen = form;
+            StreamWriter1.Load(dataGridView2, "Tables\\test2.base");
         }
 
         Point lastPoint;
@@ -60,6 +63,11 @@ namespace Course_paper
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Send_Click(object sender, EventArgs e)
+        {
+            StreamWriter1.Save(dataGridView2, "Tables\\test2.base");
         }
     }
 }

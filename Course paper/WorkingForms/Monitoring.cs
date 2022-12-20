@@ -1,8 +1,10 @@
-﻿using System;
+﻿using StrWriter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,8 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			ClassComand.ReturnWindow(buttonBack, this, form);
-		}
+            StreamWriter1.Load(dataGridView1, "Tables\\test1.base");
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
@@ -43,5 +46,10 @@ namespace Course_paper
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-	}
+
+        private void Send_Click(object sender, EventArgs e)
+        {
+            StreamWriter1.Save(dataGridView1, "Tables\\test1.base");
+        }
+    }
 }
