@@ -84,7 +84,10 @@ namespace Course_paper_test
         public void SaveTest1()
         {
             DataGridView dgv = new DataGridView();
-            string path = @"D:\test - Copy - Copy.base";
+            string path = @"Tables\SaveTest1.base";
+            var path2 = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path);
+            string a1 = "";
+            using (StreamWriter streamwriter = new StreamWriter(path2, false));
             dgv.Columns.Add("1", "11");
             dgv.Columns.Add("2", "22");
             dgv.Columns.Add("3", "33");
@@ -94,14 +97,14 @@ namespace Course_paper_test
             {
                 dgv.Rows.Add();
                 for (int j = 0; j < 5; j++)
+                {
                     dgv.Rows[i].Cells[j].Value = i + j + 1;
+                    a1 += i + j + 1 + "\r\n";
+                }
             }
             StreamWriter1.Save(dgv, path);
-            string a1 = @"D:\test.base";
-            using (StreamReader sr1 = new StreamReader(a1))
-            using (StreamReader sr2 = new StreamReader(path))
+            using (StreamReader sr2 = new StreamReader(path2))
             {
-                a1 = sr1.ReadToEnd();
                 path = sr2.ReadToEnd();
             }
             Assert.AreEqual(a1, path);
@@ -109,9 +112,11 @@ namespace Course_paper_test
         [TestMethod]
         public void LoadTest1()
         {
-            string path = @"D:\temp.base";
+            string path = @"Tables\LoadTest1.base";
+            var path2 = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path);
             string str1 = "", str2 = "";
-            StreamWriter streamwriter = new StreamWriter(path, false);
+            using (StreamWriter strwriter = new StreamWriter(path2, false)) ;
+            StreamWriter streamwriter = new StreamWriter(path2, false);
             for (int j = 0; j < 5; j++)
                 for (int i = 0; i < 5; i++)
                 {
@@ -125,15 +130,19 @@ namespace Course_paper_test
             dgv.Columns.Add("3", "33");
             dgv.Columns.Add("4", "44");
             dgv.Columns.Add("5", "55");
-            StreamWriter1.Load(dgv, path);
+            StreamWriter1.Load(dgv, path2);
             streamwriter.Close();
             for (int j = 0; j < dgv.Rows.Count - 1; j++)
                 for (int i = 0; i < dgv.Rows[j].Cells.Count; i++)
                     str1 += dgv.Rows[j].Cells[i].Value;
             Assert.AreEqual(str1, str2);
         }
+    }
+    [TestClass]
+    public class SalaryCalcTest2
+    {
         [TestMethod]
-        public void LineFullTest()
+        public void LineFullTest1()
         {
             DataGridView dgv = new DataGridView();
             dgv.Columns.Add("1", "11");
@@ -144,15 +153,23 @@ namespace Course_paper_test
             Assert.IsFalse(SalaryCalculation.LineFull(0, dgv));
             dgv.Rows.Add();
             for (int i = 0; i < 4; i++)
-            {
                 dgv.Rows[0].Cells[i].Value = i;
-            }
             Assert.IsTrue(SalaryCalculation.LineFull(0, dgv));
         }
         [TestMethod]
-        public void ItogTest()
+        public void ItogTest1()
         {
-
+            DataGridView dgv = new DataGridView();
+            dgv.Columns.Add("1", "11");
+            dgv.Columns.Add("2", "22");
+            dgv.Columns.Add("3", "33");
+            dgv.Columns.Add("4", "44");
+            dgv.Columns.Add("5", "55");
+            for (int i = 0; i < 4; i++)
+                dgv.Rows[0].Cells[i].Value = i * 20 + 50;
+            SalaryCalculation.Itog(dgv);
+            int result = int.Parse(dgv.Rows[0].Cells[3].Value.ToString()) + int.Parse(dgv.Rows[0].Cells[2].Value.ToString()) * int.Parse(dgv.Rows[0].Cells[1].Value.ToString());
+            Assert.AreEqual(result, dgv.Rows[0].Cells[4].Value);
         }
     }
 }

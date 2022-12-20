@@ -27,8 +27,18 @@ namespace Course_paper
 			formtoopen = form;
 			StreamWriter1.Load(dataGridView1, "Tables\\test.base");
         }
+        public SalaryCalculation()
+        {
+            InitializeComponent();
+            var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
+            foreach (var button in buttons)
+                ClassComand.SwitchColorButton(button);
+            ClassComand.Close(CloseButton);
+            ClassComand.ShowHelp(helpButton);
+            StreamWriter1.Load(dataGridView1, "Tables\\test.base");
+        }
 
-		Point lastPoint;
+        Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -59,7 +69,7 @@ namespace Course_paper
 			StreamWriter1.Save(dataGridView1, "Tables\\test.base");
 
         }
-		public void Itog()
+		public static void Itog(DataGridView dataGridView1)
 		{
 			for (int i = 0; i < dataGridView1.RowCount; i++)
 			{
@@ -79,7 +89,7 @@ namespace Course_paper
 
         private void totalButton_Click(object sender, EventArgs e)
         {
-            Itog();
+            Itog(dataGridView1);
         }
     }
 }
