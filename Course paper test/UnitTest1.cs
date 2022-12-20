@@ -11,9 +11,8 @@ namespace Course_paper_test
     [TestClass]
     public class StreamWriter1Test1
     {
-
         [TestMethod]
-        public void SaveTest2()
+        public void SaveTest2() 
         {
             StreamWriter filePathArrange = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testprog.base"), false);
             StreamWriter filePathActual = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\testTest.base"), false);
