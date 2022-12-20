@@ -66,7 +66,7 @@ namespace Course_paper
 			if (dataTable.Rows.Count > 0)
 			{
 				var temp = Login.Text;
-                UserRole(temp);
+				UserRole(temp);
 			}
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
@@ -122,10 +122,5 @@ namespace Course_paper
 			}
 			conn.Close();
 		}
-
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
+	}
 }

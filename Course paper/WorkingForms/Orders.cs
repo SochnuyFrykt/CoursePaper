@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Net;
-using System.Net.Mail;
+//using System.Net;
+//using System.Net.Mail;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,29 +61,29 @@ namespace Course_paper
 			Hide();
 		}
 
-		private void SendButton_Click(object sender, EventArgs e)
-		{
-			if (richTextBox1.Text != "")
-			{
-				MailAddress fromAddress = new MailAddress("limon12345ivanoff@ya.ru", "Данил");
-				MailAddress toAdress = new MailAddress("kuzkokuzkovi4@gmail.com");
-				MailMessage mailMessage = new MailMessage(fromAddress, toAdress);
+		//private void SendButton_Click(object sender, EventArgs e)
+		//{
+		//	if (richTextBox1.Text != "")
+		//	{
+		//		MailAddress fromAddress = new MailAddress("limon12345ivanoff@ya.ru", "Данил");
+		//		MailAddress toAdress = new MailAddress("kuzkokuzkovi4@gmail.com");
+		//		MailMessage mailMessage = new MailMessage(fromAddress, toAdress);
 
-				mailMessage.Subject = "Заказ товара";
-				mailMessage.Body = richTextBox1.Text;
+		//		mailMessage.Subject = "Заказ товара";
+		//		mailMessage.Body = richTextBox1.Text;
 
-				SmtpClient smtpClient = new SmtpClient();
-				smtpClient.Host = "smtp.gmail.com";
-				smtpClient.Port = 587;
-				smtpClient.EnableSsl = true;
-				smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-				smtpClient.UseDefaultCredentials = false;
-				smtpClient.Credentials = new NetworkCredential(fromAddress.Address, "Ss2-n9h-eii-3VS");
+		//		SmtpClient smtpClient = new SmtpClient();
+		//		smtpClient.Host = "smtp.gmail.com";
+		//		smtpClient.Port = 587;
+		//		smtpClient.EnableSsl = true;
+		//		smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+		//		smtpClient.UseDefaultCredentials = false;
+		//		smtpClient.Credentials = new NetworkCredential(fromAddress.Address, "Ss2-n9h-eii-3VS");
 				
-				smtpClient.Send(mailMessage);
-			}
-			else
-				throw new ArgumentException("Вы пытаетесь отправить пустое письмо. Так делать плохо!");
-		}
+		//		smtpClient.Send(mailMessage);
+		//	}
+		//	else
+		//		throw new ArgumentException("Вы пытаетесь отправить пустое письмо. Так делать плохо!");
+		//}
 	}
 }

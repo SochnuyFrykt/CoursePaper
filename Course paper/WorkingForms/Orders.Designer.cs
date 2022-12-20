@@ -150,7 +150,7 @@
 			this.SendButton.TabIndex = 20;
 			this.SendButton.Text = "Отправить заявку";
 			this.SendButton.UseVisualStyleBackColor = false;
-			this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
+			//this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
 			// 
 			// Orders
 			// 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Course_paper
 {
-	internal class DBUtils
+	public class DBUtils
 	{
 		MySqlConnection connection = new MySqlConnection(
 			"server=localhost;" +

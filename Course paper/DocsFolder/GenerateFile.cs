@@ -9,9 +9,9 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace Course_paper.DocsFolder
 {
-	internal class GenerateFile
+	public class GenerateFile
 	{
-		private FileInfo fileInfo;
+		public FileInfo fileInfo { get; set; }
 
 		public static void Generate(Button generateButton, string path, Dictionary<string, string> dictionary)
 		{
@@ -22,6 +22,8 @@ namespace Course_paper.DocsFolder
 			};
 		}
 
+		public GenerateFile() { }
+
 		public GenerateFile(string fileName)
 		{
 			if (File.Exists(fileName))
@@ -29,7 +31,7 @@ namespace Course_paper.DocsFolder
 			else throw new Exception("Файл не найден");
 		}
 
-		internal bool Process(Dictionary<string, string> items)
+		public bool Process(Dictionary<string, string> items)
 		{
 			Word.Application app = null;
 			try
@@ -60,7 +62,7 @@ namespace Course_paper.DocsFolder
 						Replace: replace);
 				}
 				var newFilePath = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents";
-				var fileName = DateTime.Now.ToString("yyyy MM dd HH:mm:ss") + fileInfo.Name;
+				var fileName = CreateNewFile(DateTime.Now.ToString("yyyy MM dd HH:mm:ss"), fileInfo.Name);
 				Object newFileName = Path.Combine(newFilePath, fileName);
 				app.ActiveDocument.SaveAs2(newFileName);
 				app.ActiveDocument.Close();
@@ -74,6 +76,11 @@ namespace Course_paper.DocsFolder
 					app.Quit();
 			}
 			return false;
+		}
+
+		public string CreateNewFile(string first, string second)
+		{
+			return first + second;
 		}
 	}
 }

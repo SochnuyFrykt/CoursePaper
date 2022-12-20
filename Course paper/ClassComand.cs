@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-	internal class ClassComand
+	public class ClassComand
 	{
 		public static void SwitchColorButton(Label button)
 		{
@@ -59,6 +59,5 @@ namespace Course_paper
 				hideForm.Hide();
 			};
 		}
-
 	}
 }
