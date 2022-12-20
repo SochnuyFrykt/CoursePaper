@@ -65,15 +65,16 @@ namespace Course_paper
 
 			if (dataTable.Rows.Count > 0)
 			{
-				UserRole();
+				var temp = Login.Text;
+                UserRole(temp);
 			}
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
 		}
 
-		public void UserRole()
+		public void UserRole(string temp)
 		{
-			string UserName = Login.Text;
+			string UserName = temp;
 			string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
 			string sql = "SELECT Post FROM coursedb.users WHERE `login` = @un";
 
@@ -121,5 +122,10 @@ namespace Course_paper
 			}
 			conn.Close();
 		}
-	}
+
+        private void Login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

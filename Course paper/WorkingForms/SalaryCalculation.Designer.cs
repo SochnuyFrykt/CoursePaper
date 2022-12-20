@@ -36,12 +36,13 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Send = new System.Windows.Forms.Button();
             this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Send = new System.Windows.Forms.Button();
+            this.totalButton = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -150,6 +151,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(976, 428);
             this.dataGridView1.TabIndex = 19;
             // 
+            // Send
+            // 
+            this.Send.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.Send.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Send.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.Send.ForeColor = System.Drawing.Color.White;
+            this.Send.Location = new System.Drawing.Point(846, 399);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(131, 54);
+            this.Send.TabIndex = 20;
+            this.Send.Text = "Сохранить изменения";
+            this.Send.UseVisualStyleBackColor = false;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
+            // 
             // fullName
             // 
             this.fullName.HeaderText = "ФИО Сотрудника";
@@ -175,21 +191,22 @@
             // 
             this.total.HeaderText = "Итог";
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
-            // Send
+            // totalButton
             // 
-            this.Send.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.Send.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Send.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.Send.ForeColor = System.Drawing.Color.White;
-            this.Send.Location = new System.Drawing.Point(846, 399);
-            this.Send.Name = "Send";
-            this.Send.Size = new System.Drawing.Size(131, 54);
-            this.Send.TabIndex = 20;
-            this.Send.Text = "Сохранить изменения";
-            this.Send.UseVisualStyleBackColor = false;
-            this.Send.Click += new System.EventHandler(this.Send_Click);
+            this.totalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.totalButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.totalButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.totalButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.totalButton.ForeColor = System.Drawing.Color.White;
+            this.totalButton.Location = new System.Drawing.Point(846, 339);
+            this.totalButton.Name = "totalButton";
+            this.totalButton.Size = new System.Drawing.Size(131, 54);
+            this.totalButton.TabIndex = 21;
+            this.totalButton.Text = "Рассчитать сумму зарплаты";
+            this.totalButton.UseVisualStyleBackColor = false;
+            this.totalButton.Click += new System.EventHandler(this.totalButton_Click);
             // 
             // SalaryCalculation
             // 
@@ -197,6 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.totalButton);
             this.Controls.Add(this.Send);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BottomPanel);
@@ -224,11 +242,12 @@
         private System.Windows.Forms.Label helpButton;
         private System.Windows.Forms.Label buttonBack;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Send;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hours;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bonus;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.Button Send;
+        private System.Windows.Forms.Button totalButton;
     }
 }
