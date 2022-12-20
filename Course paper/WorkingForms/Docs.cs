@@ -1,12 +1,6 @@
 ﻿using Course_paper.DocsFolder;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper
@@ -14,8 +8,8 @@ namespace Course_paper
 	public partial class Docs : Form
 	{
 		Form formToOpen;
-		public Docs(MainManuForm form)
-		{
+		public Docs(MainManuForm form) // Конструктор только для генерального директора
+        {
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
 			foreach (var button in buttons)
@@ -25,8 +19,8 @@ namespace Course_paper
 			formToOpen = form;
 		}
 
-		public Docs()
-		{
+		public Docs() // Конструктор для всех должностей кроме генерального директора
+        {
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
 			foreach (var button in buttons)
@@ -36,8 +30,8 @@ namespace Course_paper
 		}
 
 		Point lastPoint;
-		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
-		{
+		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
+        {
 			if (e.Button == MouseButtons.Left)
 			{
 				Left += e.X - lastPoint.X;
@@ -45,38 +39,38 @@ namespace Course_paper
 			}
 		}
 
-		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
-		{
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
+        {
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-		private void CollapsButton_Click(object sender, EventArgs e)
-		{
+		private void CollapsButton_Click(object sender, EventArgs e) // Скрытие окна
+        {
 			WindowState = FormWindowState.Minimized;
 		}
 
-		private void ButtonBack_Click(object sender, EventArgs e)
-		{
+		private void ButtonBack_Click(object sender, EventArgs e) // Возврат окна
+        {
 			formToOpen.Show();
 			Hide();
 		}
 
-		private void DismissalEmployee_Click(object sender, EventArgs e)
+		private void DismissalEmployee_Click(object sender, EventArgs e) // Метод для перехода в окно "Увольнение работника"
 		{
 			var dismissalForm = new DismissalEmployee();
 			dismissalForm.Show();
 			Hide();
 		}
 
-		private void AcceptanceEmployee_Click(object sender, EventArgs e)
-		{
+		private void AcceptanceEmployee_Click(object sender, EventArgs e) // Метод для перехода в окно "Принятие работника"
+        {
 			var acceptanceEmplaoyee = new AcceptanceEmployee();
 			acceptanceEmplaoyee.Show();
 			Hide();
 		}
 
-		private void ContractCustomer_Click(object sender, EventArgs e)
-		{
+		private void ContractCustomer_Click(object sender, EventArgs e) // Метод для перехода в окно "Оформление контракта с заказчиком"
+        {
 			var contractCustomer = new ContractCustomer();
 			contractCustomer.Show();
 			Hide();

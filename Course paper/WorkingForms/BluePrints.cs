@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper
@@ -14,7 +8,7 @@ namespace Course_paper
 	public partial class BluePrints : Form
 	{
 		Form formtoopen;
-		public BluePrints()
+		public BluePrints() // Конструктор для всех должностей кроме генерального директора
 		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
@@ -24,7 +18,7 @@ namespace Course_paper
 			ClassComand.ShowHelp(helpButton);
 			webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Blueprints"));
 		}
-		public BluePrints(MainManuForm form)
+		public BluePrints(MainManuForm form) // Конструктор только для генерального директора
 		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, buttonBack, helpButton };
@@ -37,7 +31,7 @@ namespace Course_paper
 		}
 
 		Point lastPoint;
-		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
 		{
 			if (e.Button == MouseButtons.Left)
 			{
@@ -46,17 +40,17 @@ namespace Course_paper
 			}
 		}
 
-		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-		private void CollapsButton_Click(object sender, EventArgs e)
+		private void CollapsButton_Click(object sender, EventArgs e) // Скрытие окна
 		{
 			WindowState = FormWindowState.Minimized;
 		}
 
-		private void label2_Click(object sender, EventArgs e)
+		private void buttonBack_Click(object sender, EventArgs e) // Возврат окна
 		{
 			formtoopen.Show();
 			Hide();

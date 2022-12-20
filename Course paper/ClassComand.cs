@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Course_paper
 {
-	public class ClassComand
+
+	internal class ClassComand
 	{
+
+		//Позволяем менять цвет кнопок при наведении
 		public static void SwitchColorButton(Label button)
 		{
 			button.MouseEnter += (s, n) =>
@@ -18,13 +16,15 @@ namespace Course_paper
 				button.ForeColor = Color.White;
 		}
 
+		//Действие при нажатии кнопки закрыть в приложении
 		public static void Close(Label button)
 		{
 			button.MouseClick += (s, n) =>
 				Application.Exit();
 		}
 
-		public static void Hide(Label button)
+        //Действие при нажатии кнопки скрыть в приложении
+        public static void Hide(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{
@@ -33,7 +33,8 @@ namespace Course_paper
 			};
 		}
 
-		public static void ShowHelp(Label button)
+        //Действие при нажатии кнопки помощь в приложении (Открывает помощь)
+        public static void ShowHelp(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{
@@ -59,5 +60,6 @@ namespace Course_paper
 				hideForm.Hide();
 			};
 		}
+
 	}
 }

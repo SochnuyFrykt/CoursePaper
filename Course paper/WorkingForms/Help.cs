@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Course_paper
 {
 	public partial class Help : Form
 	{
-		public Help()
+		public Help() // Конструктор для всех должностей
 		{
 			InitializeComponent();
 			var buttons = new Label[2] { CloseButton, CollapsButton };
@@ -22,8 +15,8 @@ namespace Course_paper
 			ClassComand.Hide(CloseButton);
 		}
 		Point lastPoint;
-		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
-		{
+		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
+        {
 			if (e.Button == MouseButtons.Left)
 			{
 				Left += e.X - lastPoint.X;
@@ -31,18 +24,18 @@ namespace Course_paper
 			}
 		}
 
-		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
-		{
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
+        {
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-		private void CollapsButton_Click(object sender, EventArgs e)
-		{
+		private void CollapsButton_Click(object sender, EventArgs e) // Скрытие окна
+        {
 			WindowState = FormWindowState.Minimized;
 		}
 
-		private void CloseButton_Click(object sender, EventArgs e)
-		{
+		private void CloseButton_Click(object sender, EventArgs e) // Закрытие окна
+        {
 			Close();
 		}
 	}

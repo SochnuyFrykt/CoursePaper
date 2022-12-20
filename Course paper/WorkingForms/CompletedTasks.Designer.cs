@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CollapsButton = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-            this.TopPanel.Controls.Add(this.label2);
+            this.TopPanel.Controls.Add(this.buttonBack);
             this.TopPanel.Controls.Add(this.label3);
             this.TopPanel.Controls.Add(this.CollapsButton);
             this.TopPanel.Controls.Add(this.CloseButton);
@@ -62,17 +62,17 @@
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
             // 
-            // label2
+            // buttonBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "<";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.buttonBack.AutoSize = true;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.Location = new System.Drawing.Point(3, 2);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(25, 25);
+            this.buttonBack.TabIndex = 6;
+            this.buttonBack.Text = "<";
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label3
             // 
@@ -201,6 +201,7 @@
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "CompletedTasks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
@@ -220,7 +221,7 @@
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label buttonBack;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper
@@ -16,7 +13,7 @@ namespace Course_paper
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new AuthorizationForm());
+			Application.Run(new AuthorizationForm()); //Запуск первоначального окна
 		}
 	}
 }
