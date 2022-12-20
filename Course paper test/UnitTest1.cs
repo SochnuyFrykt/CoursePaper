@@ -80,7 +80,7 @@ namespace Course_paper_test
             }
         }
         [TestMethod]
-        public void SaveTest1()
+        public void SaveTest1() //Проверяет метод который сохраняет данные из таблицы в файл
         {
             DataGridView dgv = new DataGridView();
             string path = @"Tables\SaveTest1.base";
@@ -109,7 +109,7 @@ namespace Course_paper_test
             Assert.AreEqual(a1, path);
         }
         [TestMethod]
-        public void LoadTest1()
+        public void LoadTest1() //Проверяет метод который загружает данные из файла в таблицу
         {
             string path = @"Tables\LoadTest1.base";
             var path2 = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path);
@@ -141,7 +141,7 @@ namespace Course_paper_test
     public class SalaryCalcTest2
     {
         [TestMethod]
-        public void LineFullTest1()
+        public void LineFullTest1() //Проверяет метод который смотри заполнены ли все данные в строке (кроме итога)
         {
             DataGridView dgv = new DataGridView();
             dgv.Columns.Add("1", "11");
@@ -156,9 +156,9 @@ namespace Course_paper_test
             Assert.IsTrue(SalaryCalculation.LineFull(0, dgv));
         }
         [TestMethod]
-        public void ItogTest1()
+        public void ItogTest1() //Проверяет результат вычисления метода Itog() в SalaryCalculation и записалось ли число в нужную ячейку
         {
-            DataGridView dgv = new DataGridView();
+            DataGridView dgv = new DataGridView(); 
             dgv.Columns.Add("1", "11");
             dgv.Columns.Add("2", "22");
             dgv.Columns.Add("3", "33");
