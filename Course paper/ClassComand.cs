@@ -10,6 +10,7 @@ namespace Course_paper
 {
 	internal class ClassComand
 	{
+		//Позволяем менять цвет кнопок при наведении
 		public static void SwitchColorButton(Label button)
 		{
 			button.MouseEnter += (s, n) =>
@@ -17,14 +18,14 @@ namespace Course_paper
 			button.MouseLeave += (s, n) =>
 				button.ForeColor = Color.White;
 		}
-
+		//Действие при нажатии кнопки закрыть в приложении
 		public static void Close(Label button)
 		{
 			button.MouseClick += (s, n) =>
 				Application.Exit();
 		}
-
-		public static void Hide(Label button)
+        //Действие при нажатии кнопки скрыть в приложении
+        public static void Hide(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{
@@ -32,8 +33,8 @@ namespace Course_paper
 				help.Hide();
 			};
 		}
-
-		public static void ShowHelp(Label button)
+        //Действие при нажатии кнопки помощь в приложении (Открывает помощь)
+        public static void ShowHelp(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{

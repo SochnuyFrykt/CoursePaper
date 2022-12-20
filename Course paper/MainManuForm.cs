@@ -39,6 +39,7 @@ namespace Course_paper
 		}
 
 		Point lastPoint;
+		//Два следующих метода позволяют двигать окно
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -53,6 +54,7 @@ namespace Course_paper
 			lastPoint = new Point(e.X, e.Y);
 		}
 
+		//Скрывает окно при нажатии кнопки (В панель задач)
 		private void CollapsButton_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Minimized;

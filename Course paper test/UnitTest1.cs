@@ -114,7 +114,7 @@ namespace Course_paper_test
             string path = @"Tables\LoadTest1.base";
             var path2 = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path);
             string str1 = "", str2 = "";
-            using (StreamWriter strwriter = new StreamWriter(path2, false)) ;
+            using (StreamWriter strwriter = new StreamWriter(path2, false));
             StreamWriter streamwriter = new StreamWriter(path2, false);
             for (int j = 0; j < 5; j++)
                 for (int i = 0; i < 5; i++)

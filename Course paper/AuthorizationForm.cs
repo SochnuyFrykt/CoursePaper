@@ -25,6 +25,7 @@ namespace Course_paper
 		}
 
 		Point lastPoint;
+		//Два метода снизу позволяют двигать окно программы
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -38,22 +39,19 @@ namespace Course_paper
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
-
+		//Позволяет скрыть окно программы
 		private void CollapsButton_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-
-		private void LoginButton_Click(object sender, EventArgs e)
+		//Действие при нажатии кнопки авторизации
+		private void LoginButton_Click(object sender, EventArgs e) //Подключается к базе данных, проверяет правильность пароля и логина
 		{
 			string loginUser = Login.Text;
 			string passwordUser = Password.Text;
-
 			DBUtils databaseUtils = new DBUtils();
 			DataTable dataTable = new DataTable();
 			MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
-
-
 			MySqlCommand mySqlCommand = new MySqlCommand(
 				"SELECT * FROM coursedb.users WHERE login = @uL AND pass = @uP",
 				databaseUtils.GetConnection());
@@ -71,28 +69,18 @@ namespace Course_paper
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
 		}
-
-		public void UserRole(string temp)
+		//Подключается к базе данных и смотрит роль пользователя
+		public void UserRole(string temp) 
 		{
 			string UserName = temp;
 			string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
 			string sql = "SELECT Post FROM coursedb.users WHERE `login` = @un";
-
 			MySqlConnection conn = new MySqlConnection(connStr);
 			conn.Open();
-
 			MySqlParameter nameParam = new MySqlParameter("@un", UserName);
-
 			MySqlCommand command = new MySqlCommand(sql, conn);
 			command.Parameters.Add(nameParam);
-
 			string Form_Role = command.ExecuteScalar().ToString();
-
-			//         Switch(Form_Role)
-			//{
-			//	case "Администратор": Form.ActiveForm.Close(); Form1 f1 = new Form1(); f1.Show(); break;
-			//             default:  Form.ActiveForm.Close(); Form2 f2 = new Form2(); f2.Show();
-			//         }
 			switch (Form_Role)
 			{
 				case "Генеральный директор":
