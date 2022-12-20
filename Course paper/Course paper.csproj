@@ -191,6 +191,7 @@
     <EmbeddedResource Include="WorkingForms\SalaryCalculation.resx">
       <DependentUpon>SalaryCalculation.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DocsFolder\DocsTemplate\Договор на оказание услуг.doc" />
     <None Include="DocsFolder\DocsTemplate\Приказ об увольнении.doc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

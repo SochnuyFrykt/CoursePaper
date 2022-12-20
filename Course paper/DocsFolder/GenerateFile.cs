@@ -25,9 +25,7 @@ namespace Course_paper.DocsFolder
 		public GenerateFile(string fileName)
 		{
 			if (File.Exists(fileName))
-			{
 				fileInfo = new FileInfo(fileName);
-			}
 			else throw new Exception("Файл не найден");
 		}
 
