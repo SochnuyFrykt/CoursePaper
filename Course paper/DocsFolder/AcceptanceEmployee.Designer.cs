@@ -39,13 +39,13 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.Post = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.AcceptanceDate = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.Salary = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.TrialPeriod = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.generateButton = new System.Windows.Forms.Button();
+			this.acceptanceDate = new System.Windows.Forms.DateTimePicker();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -177,15 +177,6 @@
 			this.label2.TabIndex = 10;
 			this.label2.Text = "Должность";
 			// 
-			// AcceptanceDate
-			// 
-			this.AcceptanceDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.AcceptanceDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.AcceptanceDate.Location = new System.Drawing.Point(203, 181);
-			this.AcceptanceDate.Name = "AcceptanceDate";
-			this.AcceptanceDate.Size = new System.Drawing.Size(358, 20);
-			this.AcceptanceDate.TabIndex = 13;
-			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -233,11 +224,11 @@
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
 			this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label6.Location = new System.Drawing.Point(12, 291);
+			this.label6.Location = new System.Drawing.Point(4, 301);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(161, 40);
+			this.label6.Size = new System.Drawing.Size(161, 20);
 			this.label6.TabIndex = 16;
-			this.label6.Text = "Истытательный срок\r\n(Дата)";
+			this.label6.Text = "Истытательный срок\r\n";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// generateButton
@@ -247,12 +238,20 @@
 			this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.generateButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
 			this.generateButton.ForeColor = System.Drawing.Color.White;
-			this.generateButton.Location = new System.Drawing.Point(273, 337);
+			this.generateButton.Location = new System.Drawing.Point(265, 337);
 			this.generateButton.Name = "generateButton";
 			this.generateButton.Size = new System.Drawing.Size(230, 26);
 			this.generateButton.TabIndex = 13;
 			this.generateButton.Text = "Сформировать документ";
 			this.generateButton.UseVisualStyleBackColor = false;
+			this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
+			// 
+			// acceptanceDate
+			// 
+			this.acceptanceDate.Location = new System.Drawing.Point(203, 182);
+			this.acceptanceDate.Name = "acceptanceDate";
+			this.acceptanceDate.Size = new System.Drawing.Size(154, 20);
+			this.acceptanceDate.TabIndex = 18;
 			// 
 			// AcceptanceEmployee
 			// 
@@ -260,12 +259,12 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(600, 408);
+			this.Controls.Add(this.acceptanceDate);
 			this.Controls.Add(this.generateButton);
 			this.Controls.Add(this.TrialPeriod);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.Salary);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.AcceptanceDate);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.Post);
 			this.Controls.Add(this.label2);
@@ -299,12 +298,12 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox Post;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox AcceptanceDate;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox Salary;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox TrialPeriod;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button generateButton;
+		private System.Windows.Forms.DateTimePicker acceptanceDate;
 	}
 }
