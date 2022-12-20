@@ -25,7 +25,7 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			formtoopen = form;
-            string[] dataString = File.ReadAllLines(@"D:\test.base");
+            string[] dataString = File.ReadAllLines(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\test.base"));
 			for (int i = 0; i < dataString.Length;)
                 for (int k = 0; k < dataString.Length / 5; k++)
                 {
@@ -66,7 +66,7 @@ namespace Course_paper
 
         private void MonitoringButton_Click(object sender, EventArgs e)
         {
-            StreamWriter streamwriter = new StreamWriter("D://test.base", false);
+            StreamWriter streamwriter = new StreamWriter(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Tables\\test.base"), false);
             for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
             {
                 for (int i = 0; i < dataGridView1.Rows[j].Cells.Count; i++)
