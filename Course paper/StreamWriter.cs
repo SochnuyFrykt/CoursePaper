@@ -14,10 +14,10 @@ namespace StrWriter
         {
             string[] dataString = File.ReadAllLines(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, path));
             for (int i = 0; i < dataString.Length;)
-                for (int k = 0; k < dataString.Length / 5; k++)
+                for (int k = 0; k < dataString.Length / dataGridView1.Rows[0].Cells.Count; k++)
                 {
                     dataGridView1.Rows.Add();
-                    for (int j = 0; j < 5; j++)
+                    for (int j = 0; j < dataGridView1.Rows[0].Cells.Count; j++)
                     {
                         dataGridView1.Rows[k].Cells[j].Value = dataString[i];
                         i++;

@@ -23,7 +23,7 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             formtoopen = form;
-            //StreamWriter1.Load(dataGridView1, "Tables\\test3.base");
+            StreamWriter1.Load(dataGridView1, "Tables\\test3.base");
         }
 
         Point lastPoint;
