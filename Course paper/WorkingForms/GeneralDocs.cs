@@ -17,6 +17,7 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "GeneralDocs"));
+            buttonBack.Visible = false;
         }
         public GeneralDocs(MainManuForm form) // Конструктор только для генерального директора
         {

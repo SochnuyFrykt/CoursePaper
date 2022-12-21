@@ -27,7 +27,8 @@ namespace Course_paper
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-		}
+			ButtonBack.Visible = false;
+        }
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
