@@ -65,14 +65,14 @@
 			this.buttonBack.Size = new System.Drawing.Size(25, 25);
 			this.buttonBack.TabIndex = 6;
 			this.buttonBack.Text = "<";
-			this.buttonBack.Click += new System.EventHandler(this.label2_Click);
+			this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
 			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label3.Location = new System.Drawing.Point(443, 5);
+			this.label3.Location = new System.Drawing.Point(427, 5);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(146, 20);
 			this.label3.TabIndex = 5;

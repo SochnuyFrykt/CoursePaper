@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CollapsButton = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Send = new System.Windows.Forms.Button();
             this.TopPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -49,7 +50,7 @@
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(37)))), ((int)(((byte)(80)))));
-            this.TopPanel.Controls.Add(this.label2);
+            this.TopPanel.Controls.Add(this.buttonBack);
             this.TopPanel.Controls.Add(this.label3);
             this.TopPanel.Controls.Add(this.CollapsButton);
             this.TopPanel.Controls.Add(this.CloseButton);
@@ -61,24 +62,24 @@
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
             // 
-            // label2
+            // buttonBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(3, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "<";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.buttonBack.AutoSize = true;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBack.Location = new System.Drawing.Point(3, 2);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(25, 25);
+            this.buttonBack.TabIndex = 6;
+            this.buttonBack.Text = "<";
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(443, 5);
+            this.label3.Location = new System.Drawing.Point(416, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 20);
             this.label3.TabIndex = 5;
@@ -139,7 +140,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Namee,
+            this.Name,
             this.Number,
             this.Customer,
             this.Date,
@@ -151,8 +152,8 @@
             // 
             // Name
             // 
-            this.Namee.HeaderText = "Название";
-            this.Namee.Name = "Name";
+            this.Name.HeaderText = "Название";
+            this.Name.Name = "Name";
             // 
             // Number
             // 
@@ -174,17 +175,32 @@
             this.Cost.HeaderText = "Итоговая стоимость";
             this.Cost.Name = "Cost";
             // 
+            // Send
+            // 
+            this.Send.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.Send.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Send.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Send.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.Send.ForeColor = System.Drawing.Color.White;
+            this.Send.Location = new System.Drawing.Point(841, 393);
+            this.Send.Name = "Send";
+            this.Send.Size = new System.Drawing.Size(131, 54);
+            this.Send.TabIndex = 22;
+            this.Send.Text = "Сохранить изменения";
+            this.Send.UseVisualStyleBackColor = false;
+            this.Send.Click += new System.EventHandler(this.Send_Click);
+            // 
             // CompletedTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.Send);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.TopPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompletedTasks";
             this.TopPanel.ResumeLayout(false);
@@ -204,12 +220,14 @@
         private System.Windows.Forms.Label CloseButton;
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Label helpButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label buttonBack;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.Button Send;
     }
 }

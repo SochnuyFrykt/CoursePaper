@@ -40,8 +40,8 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.SNM = new System.Windows.Forms.TextBox();
 			this.Post = new System.Windows.Forms.TextBox();
-			this.DismissalDate = new System.Windows.Forms.TextBox();
-			this.InfoAboutObjectsButton = new System.Windows.Forms.Button();
+			this.GenerateButton = new System.Windows.Forms.Button();
+			this.DismissalDate = new System.Windows.Forms.DateTimePicker();
 			this.TopPanel.SuspendLayout();
 			this.BottomPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -185,28 +185,26 @@
 			this.Post.Size = new System.Drawing.Size(358, 20);
 			this.Post.TabIndex = 8;
 			// 
+			// GenerateButton
+			// 
+			this.GenerateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+			this.GenerateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.GenerateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.GenerateButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+			this.GenerateButton.ForeColor = System.Drawing.Color.White;
+			this.GenerateButton.Location = new System.Drawing.Point(130, 218);
+			this.GenerateButton.Name = "GenerateButton";
+			this.GenerateButton.Size = new System.Drawing.Size(230, 26);
+			this.GenerateButton.TabIndex = 12;
+			this.GenerateButton.Text = "Сформировать документ";
+			this.GenerateButton.UseVisualStyleBackColor = false;
+			// 
 			// DismissalDate
 			// 
-			this.DismissalDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.DismissalDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
 			this.DismissalDate.Location = new System.Drawing.Point(130, 176);
 			this.DismissalDate.Name = "DismissalDate";
-			this.DismissalDate.Size = new System.Drawing.Size(358, 20);
-			this.DismissalDate.TabIndex = 9;
-			// 
-			// InfoAboutObjectsButton
-			// 
-			this.InfoAboutObjectsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-			this.InfoAboutObjectsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.InfoAboutObjectsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.InfoAboutObjectsButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-			this.InfoAboutObjectsButton.ForeColor = System.Drawing.Color.White;
-			this.InfoAboutObjectsButton.Location = new System.Drawing.Point(130, 218);
-			this.InfoAboutObjectsButton.Name = "InfoAboutObjectsButton";
-			this.InfoAboutObjectsButton.Size = new System.Drawing.Size(230, 26);
-			this.InfoAboutObjectsButton.TabIndex = 12;
-			this.InfoAboutObjectsButton.Text = "Сформировать документ";
-			this.InfoAboutObjectsButton.UseVisualStyleBackColor = false;
+			this.DismissalDate.Size = new System.Drawing.Size(154, 20);
+			this.DismissalDate.TabIndex = 19;
 			// 
 			// DismissalEmployee
 			// 
@@ -214,8 +212,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(500, 280);
-			this.Controls.Add(this.InfoAboutObjectsButton);
 			this.Controls.Add(this.DismissalDate);
+			this.Controls.Add(this.GenerateButton);
 			this.Controls.Add(this.Post);
 			this.Controls.Add(this.SNM);
 			this.Controls.Add(this.label4);
@@ -250,7 +248,7 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox SNM;
 		private System.Windows.Forms.TextBox Post;
-		private System.Windows.Forms.TextBox DismissalDate;
-        private System.Windows.Forms.Button InfoAboutObjectsButton;
+		private System.Windows.Forms.DateTimePicker DismissalDate;
+		public System.Windows.Forms.Button GenerateButton;
 	}
 }

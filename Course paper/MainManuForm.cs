@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper
@@ -38,7 +32,7 @@ namespace Course_paper
 			ClassComand.HideShowWindow(BlueprintsButton, this, blueprints);
 		}
 
-		Point lastPoint;
+		//Два следующих метода позволяют двигать окно
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Left)
@@ -48,11 +42,14 @@ namespace Course_paper
 			}
 		}
 
+		Point lastPoint;
+
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
 
+		//Скрывает окно при нажатии кнопки (В панель задач)
 		private void CollapsButton_Click(object sender, EventArgs e)
 		{
 			WindowState = FormWindowState.Minimized;

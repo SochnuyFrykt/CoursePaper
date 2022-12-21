@@ -66,7 +66,7 @@
 			this.buttonBack.Size = new System.Drawing.Size(25, 25);
 			this.buttonBack.TabIndex = 6;
 			this.buttonBack.Text = "<";
-			this.buttonBack.Click += new System.EventHandler(this.label2_Click);
+			this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
 			// 
 			// label3
 			// 
@@ -136,7 +136,6 @@
 			this.richTextBox1.Size = new System.Drawing.Size(976, 428);
 			this.richTextBox1.TabIndex = 3;
 			this.richTextBox1.Text = "Введите перечень вашего заказа...";
-			this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
 			// 
 			// SendButton
 			// 
@@ -151,6 +150,7 @@
 			this.SendButton.TabIndex = 20;
 			this.SendButton.Text = "Отправить заявку";
 			this.SendButton.UseVisualStyleBackColor = false;
+			//this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
 			// 
 			// Orders
 			// 

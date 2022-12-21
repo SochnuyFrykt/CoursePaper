@@ -43,11 +43,11 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.SNM = new System.Windows.Forms.TextBox();
 			this.CustomerOrganization = new System.Windows.Forms.TextBox();
-			this.StartWork = new System.Windows.Forms.TextBox();
-			this.EndWork = new System.Windows.Forms.TextBox();
 			this.Budget = new System.Windows.Forms.TextBox();
 			this.TypeBuilding = new System.Windows.Forms.TextBox();
 			this.generateButton = new System.Windows.Forms.Button();
+			this.StartDate = new System.Windows.Forms.DateTimePicker();
+			this.EndDate = new System.Windows.Forms.DateTimePicker();
 			this.BottomPanel.SuspendLayout();
 			this.TopPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -100,6 +100,7 @@
 			this.ButtonBack.Size = new System.Drawing.Size(25, 25);
 			this.ButtonBack.TabIndex = 7;
 			this.ButtonBack.Text = "<";
+			this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
 			// 
 			// label3
 			// 
@@ -222,24 +223,6 @@
 			this.CustomerOrganization.Size = new System.Drawing.Size(358, 20);
 			this.CustomerOrganization.TabIndex = 13;
 			// 
-			// StartWork
-			// 
-			this.StartWork.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.StartWork.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.StartWork.Location = new System.Drawing.Point(245, 181);
-			this.StartWork.Name = "StartWork";
-			this.StartWork.Size = new System.Drawing.Size(358, 20);
-			this.StartWork.TabIndex = 14;
-			// 
-			// EndWork
-			// 
-			this.EndWork.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.EndWork.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-			this.EndWork.Location = new System.Drawing.Point(245, 226);
-			this.EndWork.Name = "EndWork";
-			this.EndWork.Size = new System.Drawing.Size(358, 20);
-			this.EndWork.TabIndex = 15;
-			// 
 			// Budget
 			// 
 			this.Budget.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -272,17 +255,31 @@
 			this.generateButton.Text = "Сформировать документ";
 			this.generateButton.UseVisualStyleBackColor = false;
 			// 
+			// StartDate
+			// 
+			this.StartDate.Location = new System.Drawing.Point(245, 181);
+			this.StartDate.Name = "StartDate";
+			this.StartDate.Size = new System.Drawing.Size(154, 20);
+			this.StartDate.TabIndex = 20;
+			// 
+			// EndDate
+			// 
+			this.EndDate.Location = new System.Drawing.Point(245, 225);
+			this.EndDate.Name = "EndDate";
+			this.EndDate.Size = new System.Drawing.Size(154, 20);
+			this.EndDate.TabIndex = 21;
+			// 
 			// ContractCustomer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(650, 450);
+			this.Controls.Add(this.EndDate);
+			this.Controls.Add(this.StartDate);
 			this.Controls.Add(this.generateButton);
 			this.Controls.Add(this.TypeBuilding);
 			this.Controls.Add(this.Budget);
-			this.Controls.Add(this.EndWork);
-			this.Controls.Add(this.StartWork);
 			this.Controls.Add(this.CustomerOrganization);
 			this.Controls.Add(this.SNM);
 			this.Controls.Add(this.label7);
@@ -323,10 +320,10 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox SNM;
 		private System.Windows.Forms.TextBox CustomerOrganization;
-		private System.Windows.Forms.TextBox StartWork;
-		private System.Windows.Forms.TextBox EndWork;
 		private System.Windows.Forms.TextBox Budget;
 		private System.Windows.Forms.TextBox TypeBuilding;
 		private System.Windows.Forms.Button generateButton;
+		private System.Windows.Forms.DateTimePicker StartDate;
+		private System.Windows.Forms.DateTimePicker EndDate;
 	}
 }

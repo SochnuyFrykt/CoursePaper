@@ -1,14 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Course_paper
 {
-	internal class DBUtils
+	public class DBUtils
 	{
+		//	Инициализирует новый экземпляр класса MySqlConnection содержащий строку подключения.
 		MySqlConnection connection = new MySqlConnection(
 			"server=localhost;" +
 			"port=3306;" +
@@ -16,12 +12,14 @@ namespace Course_paper
 			"password=root;" +
 			"database=coursedb");
 
+		//Метод открытия соединения с базой данных
 		public void OpenConnection()
 		{
 			if (connection.State == System.Data.ConnectionState.Closed)
 				connection.Open();
 		}
 
+		//Метод закрытия соединения с базой данных
 		public void CloseConnection()
 		{
 			if (connection.State == System.Data.ConnectionState.Open)
