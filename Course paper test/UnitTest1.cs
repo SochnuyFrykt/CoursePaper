@@ -255,7 +255,7 @@ namespace Course_paper_test
 		}
 
 		[TestMethod]
-		public void Test4()
+		public void TestFileName() // Проверяет праильность наименования файла
 		{
 			var gf = new GenerateFile(@"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Приказ об увольнении.doc");
 			var app = new Word.Application();
