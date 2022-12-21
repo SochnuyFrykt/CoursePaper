@@ -9,7 +9,7 @@ namespace Course_paper.DocsFolder
 
 	public class GenerateFile
 	{
-		public FileInfo fileInfo { get; set; }
+		public FileInfo FileInfo { get; set; }
 
 		//Запускает процесс формирования документа при нажатии кнопки
 		public static void Generate(Button generateButton, string path, Dictionary<string, string> dictionary)
@@ -27,7 +27,7 @@ namespace Course_paper.DocsFolder
 		public GenerateFile(string fileName)
 		{
 			if (File.Exists(fileName))
-				fileInfo = new FileInfo(fileName); //Если файл найден
+				FileInfo = new FileInfo(fileName); //Если файл найден
 			else throw new Exception("Файл не найден"); //Выводит ошибку при не нахождении файла
 		}
 
@@ -38,7 +38,7 @@ namespace Course_paper.DocsFolder
 			try
 			{
 				app = new Word.Application();
-				Object file = fileInfo.FullName;
+				Object file = FileInfo.FullName;
 				Object missing = Type.Missing;
 				app.Documents.Open(file);
 				foreach (var item in items)
@@ -63,7 +63,7 @@ namespace Course_paper.DocsFolder
 						Replace: replace);
 				}
 				var newFilePath = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents";
-				var fileName = CreateNewNameFile(DateTime.Now.ToString("yyyy MM dd HH:mm:ss"), fileInfo.Name);
+				var fileName = CreateNewNameFile(DateTime.Now.ToString("yyyy MM dd HH:mm:ss"), FileInfo.Name);
 				CreateNewFile(app, newFilePath, fileName);
 				app.Quit();
 				return true;
@@ -77,6 +77,7 @@ namespace Course_paper.DocsFolder
 			return false;
 		}
 
+		//Создаёт новый файл
 		public bool CreateNewFile(Word.Application app, string newFilePath, string fileName)
 		{
 			if (newFilePath != "" & fileName != "")
@@ -89,6 +90,7 @@ namespace Course_paper.DocsFolder
 			else return false;
 		}
 
+		//Даёт новое название файлу
 		public string CreateNewNameFile(string first, string second)
 		{
 			return first + second;
