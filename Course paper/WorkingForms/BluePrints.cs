@@ -17,7 +17,9 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
 			webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Blueprints"));
-		}
+			buttonBack.Visible = false;
+
+        }
 		public BluePrints(MainManuForm form) // Конструктор только для генерального директора
 		{
 			InitializeComponent();

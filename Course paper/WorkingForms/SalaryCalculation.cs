@@ -29,6 +29,7 @@ namespace Course_paper
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             StreamWriter1.Load(dataGridView1, "Tables\\test.base");
+            buttonBack.Visible = false;
         }
 
         Point lastPoint;

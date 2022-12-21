@@ -16,6 +16,7 @@ namespace Course_paper
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             StreamWriter1.Load(dataGridView2, "Tables\\test2.base");
+            buttonBack.Visible = false;
         }
         public CompletedTasks(MainManuForm form) // Конструктор только для генерального директора
         {
