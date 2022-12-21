@@ -8,7 +8,6 @@ using System.Security.Cryptography;
 using Course_paper.DocsFolder;
 using System.Collections.Generic;
 using Word = Microsoft.Office.Interop.Word;
-using System.Reflection;
 
 namespace Course_paper_test
 {
@@ -235,7 +234,7 @@ namespace Course_paper_test
 		}
 
 		[TestMethod]
-		public void Test2() // Тест проверяет, что поля в форме авторизации не пусты
+		public void TestOnNullLoginPass() // Тест проверяет, что поля в форме авторизации не пусты
 		{
 			var auth = new AuthorizationForm();
 			Assert.IsNotNull(auth.Login);
@@ -252,7 +251,6 @@ namespace Course_paper_test
 			var gf = new GenerateFile();
 			var dict = new Dictionary<string, string>();
 			Assert.IsFalse(gf.Process(dict));
-
 		}
 
 		[TestMethod]
