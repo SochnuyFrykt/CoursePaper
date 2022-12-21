@@ -9,7 +9,7 @@ namespace Course_paper
 	{
 		Form formToOpen;
 		public Docs(MainManuForm form) // Конструктор только для генерального директора
-        {
+		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
 			foreach (var button in buttons)
@@ -20,7 +20,7 @@ namespace Course_paper
 		}
 
 		public Docs() // Конструктор для всех должностей кроме генерального директора
-        {
+		{
 			InitializeComponent();
 			var buttons = new Label[4] { CloseButton, CollapsButton, ButtonBack, helpButton };
 			foreach (var button in buttons)
@@ -31,7 +31,7 @@ namespace Course_paper
 
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
-        {
+		{
 			if (e.Button == MouseButtons.Left)
 			{
 				Left += e.X - lastPoint.X;
@@ -40,17 +40,17 @@ namespace Course_paper
 		}
 
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
-        {
+		{
 			lastPoint = new Point(e.X, e.Y);
 		}
 
 		private void CollapsButton_Click(object sender, EventArgs e) // Скрытие окна
-        {
+		{
 			WindowState = FormWindowState.Minimized;
 		}
 
 		private void ButtonBack_Click(object sender, EventArgs e) // Возврат окна
-        {
+		{
 			formToOpen.Show();
 			Hide();
 		}
@@ -63,14 +63,14 @@ namespace Course_paper
 		}
 
 		private void AcceptanceEmployee_Click(object sender, EventArgs e) // Метод для перехода в окно "Принятие работника"
-        {
+		{
 			var acceptanceEmplaoyee = new AcceptanceEmployee();
 			acceptanceEmplaoyee.Show();
 			Hide();
 		}
 
 		private void ContractCustomer_Click(object sender, EventArgs e) // Метод для перехода в окно "Оформление контракта с заказчиком"
-        {
+		{
 			var contractCustomer = new ContractCustomer();
 			contractCustomer.Show();
 			Hide();

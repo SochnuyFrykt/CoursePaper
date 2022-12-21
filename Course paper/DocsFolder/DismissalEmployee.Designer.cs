@@ -248,7 +248,7 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox SNM;
 		private System.Windows.Forms.TextBox Post;
-        private System.Windows.Forms.Button GenerateButton;
 		private System.Windows.Forms.DateTimePicker DismissalDate;
+		public System.Windows.Forms.Button GenerateButton;
 	}
 }

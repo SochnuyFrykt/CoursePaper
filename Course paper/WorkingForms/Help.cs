@@ -16,7 +16,7 @@ namespace Course_paper
 		}
 		Point lastPoint;
 		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
-        {
+		{
 			if (e.Button == MouseButtons.Left)
 			{
 				Left += e.X - lastPoint.X;
@@ -25,17 +25,17 @@ namespace Course_paper
 		}
 
 		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
-        {
+		{
 			lastPoint = new Point(e.X, e.Y);
 		}
 
 		private void CollapsButton_Click(object sender, EventArgs e) // Скрытие окна
-        {
+		{
 			WindowState = FormWindowState.Minimized;
 		}
 
 		private void CloseButton_Click(object sender, EventArgs e) // Закрытие окна
-        {
+		{
 			Close();
 		}
 	}

@@ -42,9 +42,9 @@ namespace Course_paper
 			}
 		}
 
-        Point lastPoint;
+		Point lastPoint;
 
-        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}

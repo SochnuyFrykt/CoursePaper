@@ -7,7 +7,7 @@ namespace Course_paper
 {
     public partial class GeneralDocs : Form
     {
-        Form formtoopen;
+        Form formToOpen;
         public GeneralDocs() // Конструктор для всех должностей кроме генерального директора
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Course_paper
 			ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
             webBrowser1.Url = new Uri(Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "GeneralDocs"));
-            formtoopen = form;
+            formToOpen = form;
         }
 
         Point lastPoint;
@@ -52,7 +52,7 @@ namespace Course_paper
 
         private void ButtonBack_Click(object sender, EventArgs e) // Возврат окна
         {
-            formtoopen.Show();
+            formToOpen.Show();
             Hide();
         }
     }

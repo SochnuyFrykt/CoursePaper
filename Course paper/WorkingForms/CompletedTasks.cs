@@ -7,7 +7,7 @@ namespace Course_paper
 {
     public partial class CompletedTasks : Form
     {
-        Form formtoopen;
+        Form formToOpen;
         public CompletedTasks() // Конструктор для всех должностей кроме генерального директора
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Course_paper
             ClassComand.SwitchColorButton(CollapsButton);
             ClassComand.Close(CloseButton);
             ClassComand.ShowHelp(helpButton);
-            formtoopen = form;
+            formToOpen = form;
             StreamWriter1.Load(dataGridView2, "Tables\\test2.base");
         }
 
@@ -50,7 +50,7 @@ namespace Course_paper
 
         private void buttonBack_Click(object sender, EventArgs e) // Возврат окна
         {
-            formtoopen.Show();
+            formToOpen.Show();
             Hide();
         }
 

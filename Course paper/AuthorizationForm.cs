@@ -9,8 +9,8 @@ namespace Course_paper
 	public partial class AuthorizationForm : Form
 	{
 
-        Point lastPoint;
-        public AuthorizationForm()
+		Point lastPoint;
+		public AuthorizationForm()
 		{
 			InitializeComponent();
 			var buttons = new Label[3] { CloseButton, CollapsButton, helpButton };
@@ -59,14 +59,14 @@ namespace Course_paper
 			if (dataTable.Rows.Count > 0)
 			{
 				var temp = Login.Text;
-                UserRole(temp);
+				UserRole(temp);
 			}
 			else MessageBox.Show("Логин или пароль введены неверно!!!");
 			databaseUtils.CloseConnection();
 		}
 
 		//Подключается к базе данных и смотрит роль пользователя
-		public void UserRole(string temp) 
+		public void UserRole(string temp)
 		{
 			string UserName = temp;
 			string connStr = "server=localhost; port=3306; username=root; password= root; database=coursedb;";
@@ -106,5 +106,5 @@ namespace Course_paper
 			}
 			conn.Close();
 		}
-    }
+	}
 }

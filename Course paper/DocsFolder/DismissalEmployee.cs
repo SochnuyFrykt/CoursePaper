@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Course_paper.DocsFolder
@@ -21,8 +16,8 @@ namespace Course_paper.DocsFolder
 				ClassComand.SwitchColorButton(button);
 			ClassComand.Close(CloseButton);
 			ClassComand.ShowHelp(helpButton);
-			string path = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Приказ об увольнении.doc.doc";
-			var items = new Dictionary<string, string>
+			string path = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Приказ об увольнении.doc";
+			var items = new Dictionary<string, string> //Атрибуты для замены
 			{
 				{ "<SNM>", SNM.Text },
 				{ "<Post>", Post.Text },
@@ -35,7 +30,7 @@ namespace Course_paper.DocsFolder
 		}
 
 		Point lastPoint;
-		private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+		private void TopPanel_MouseMove(object sender, MouseEventArgs e) // Метод для перемещения окон
 		{
 			if (e.Button == MouseButtons.Left)
 			{
@@ -44,12 +39,12 @@ namespace Course_paper.DocsFolder
 			}
 		}
 
-		private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+		private void TopPanel_MouseDown(object sender, MouseEventArgs e) // Метод для сохранения точки
 		{
 			lastPoint = new Point(e.X, e.Y);
 		}
 
-		private void ButtonBack_Click(object sender, EventArgs e)
+		private void ButtonBack_Click(object sender, EventArgs e) // Показ предыдущего окна при нажатии на кнопку
 		{
 			formToOpen.Show();
 			Hide();

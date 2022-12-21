@@ -3,10 +3,8 @@ using System.Windows.Forms;
 
 namespace Course_paper
 {
-
 	internal class ClassComand
 	{
-
 		//Позволяем менять цвет кнопок при наведении
 		public static void SwitchColorButton(Label button)
 		{
@@ -23,8 +21,8 @@ namespace Course_paper
 				Application.Exit();
 		}
 
-        //Действие при нажатии кнопки скрыть в приложении
-        public static void Hide(Label button)
+		//Действие при нажатии кнопки скрыть в приложении
+		public static void Hide(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{
@@ -33,8 +31,8 @@ namespace Course_paper
 			};
 		}
 
-        //Действие при нажатии кнопки помощь в приложении (Открывает помощь)
-        public static void ShowHelp(Label button)
+		//Действие при нажатии кнопки помощь в приложении (Открывает помощь)
+		public static void ShowHelp(Label button)
 		{
 			button.MouseClick += (s, n) =>
 			{
@@ -43,6 +41,7 @@ namespace Course_paper
 			};
 		}
 
+		//Показывает предыдущее окно при нажатии на кнопку "<"
 		public static void ReturnWindow(Label buttonBack, Form hideForm, Form showForm)
 		{
 			buttonBack.MouseClick += (s, n) =>
@@ -52,6 +51,7 @@ namespace Course_paper
 			};
 		}
 
+		//Показывает новое окно при нажатии на кнопку и скрывает старое
 		public static void HideShowWindow(Button buttonBack, Form hideForm, Form showForm)
 		{
 			buttonBack.MouseClick += (s, n) =>
@@ -60,6 +60,5 @@ namespace Course_paper
 				hideForm.Hide();
 			};
 		}
-
 	}
 }
