@@ -252,16 +252,19 @@ namespace Course_paper_test
 			var gf = new GenerateFile();
 			var dict = new Dictionary<string, string>();
 			Assert.IsFalse(gf.Process(dict));
+
 		}
 
 		[TestMethod]
 		public void TestFileName() // Проверяет праильность наименования файла
 		{
-			var gf = new GenerateFile(@"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Приказ об увольнении.doc");
+            var path = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, @"DocsTemplate\Приказ об увольнении.doc");
+            var gf = new GenerateFile(path);
 			var app = new Word.Application();
 			Object file = gf.fileInfo.FullName;
 			app.Documents.Open(file);
-			var newFilePath = @"C:\Users\sereb\OneDrive\Рабочий стол\Курсовая работа по ПИ\CoursePaper\Course paper\DocsFolder\DocsTemplate\Generated Documents"; var fileName = gf.CreateNewNameFile(DateTime.Now.ToString("yyyy MM dd HH:mm:ss"), gf.fileInfo.Name);
+			var newFilePath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, @"DocsTemplate\Generated Documents"); 
+			var fileName = gf.CreateNewNameFile(DateTime.Now.ToString("yyyy MM dd HH:mm:ss"), gf.fileInfo.Name);
 			var newFile = gf.CreateNewFile(app, newFilePath, gf.fileInfo.Name);
 			Assert.AreEqual(true, newFile);
 		}
